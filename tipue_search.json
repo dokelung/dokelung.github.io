@@ -1,6 +1,12 @@
 {
     "pages": [
         {
+            "title": "test2", 
+            "text":"第二個測試!", 
+            "tags": "python", 
+            "loc": "http://dokelung.me/python/test2/"
+        },
+        {
             "title": "test", 
             "text":"試試看中文！ import sys def test(a, b): return a+b", 
             "tags": "misc", 
