@@ -1,0 +1,10 @@
+{
+    "pages": [
+        {
+            "title": "test", 
+            "text":"試試看中文！ import sys def test(a, b): return a+b", 
+            "tags": "misc", 
+            "loc": "/test.html"
+        }        
+    ]
+}
