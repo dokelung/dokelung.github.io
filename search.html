@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> dokelung.me </title>
+    <link rel="shortcut icon" href="http://dokelung.me/images/dokelung.jpg" />
+
+    <script src="http://dokelung.me/theme/js/jquery-3.1.1.min.js"></script>
+
+    <!-- extra css -->
+
+    <!-- uikit basic -->
+    <link rel="stylesheet" href="http://dokelung.me/theme/css/uikit.min.css"/>
+    <script src="http://dokelung.me/theme/js/uikit.min.js"></script>
+
+    <!-- uk components -->
+    <link rel="stylesheet" href="http://dokelung.me/theme/css/components/sticky.css"/>
+    <script src="http://dokelung.me/theme/js/components/sticky.js"></script>
+    <link rel="stylesheet" href="http://dokelung.me/theme/css/components/search.css"/>
+    <script src="http://dokelung.me/theme/js/components/search.js"></script>
+
+    <!-- self defined  -->
+    <link rel="stylesheet" href="http://dokelung.me/theme/css/highlight.css"/>
+    <link rel="stylesheet" href="http://dokelung.me/theme/css/main.css"/>
+
+</head>
+<body>
+
+    <main class="jojo-theme">
+        <div class="uk-container uk-container-center">
+
+            <!-- nav -->
+            <nav id="jojo-page-top" class="uk-navbar jojo-main-nav">
+                <a href="http://dokelung.me" class="uk-navbar-brand"> dokelung.me </a>
+
+                <ul class="uk-navbar-nav">
+                        <li >
+                            <a href="http://dokelung.me\pages\about-me"> About me </a>
+                        </li>
+                        <li class="uk-parent" data-uk-dropdown>
+                            <a href="http://dokelung.me\categories.html"> Category </a>
+                                <div class="uk-dropdown uk-dropdown-navbar">
+                                    <ul class="uk-nav uk-nav-navbar">
+                                            <li class="uk-nav-header">
+                                                    Programming
+                                            </li>
+                                            <li >
+                                                    <a href="http://dokelung.me\category\python.html"> python </a>
+                                            </li>
+                                            <li class="uk-nav-divider">
+                                            </li>
+                                            <li >
+                                                    <a href="http://dokelung.me\category\pelican.html"> pelican </a>
+                                            </li>
+                                    </ul>
+                                </div>
+                        </li>
+                        <li >
+                            <a href="http://dokelung.me\archives.html"> Archives </a>
+                        </li>
+                </ul>
+
+                <div class="uk-navbar-flip">
+                    <div class="uk-navbar-content">
+                        <form class="uk-search" data-uk-search="{source:'my-results.json'}" action="http://dokelung.me/search.html">
+                            <input id="tipue_search_input" class="uk-search-field" type="search" name="q" autocomplete="off" required placeholder="Search...">
+                        </form>
+                    </div>
+                </div>
+
+            </nav>
+
+            <div class="uk-panel uk-panel-box uk-panel-box-secondary uk-panel-hover" id="jojo-location-panel">
+                <ul class="uk-breadcrumb">
+                    <li><a href="#" class="uk-icon-map-marker"></a></li>
+                    <li><a href="http://dokelung.me"> home </a></li>
+    <li class="uk-active"><span> search </span></li>
+                </ul>
+            </div>
+
+            <div class="uk-grid uk-margin-large-top">
+                <div class="uk-width-medium-1-10">
+
+                    <div class="uk-panel jojo-share" data-uk-sticky>
+                        <ul class="uk-nav uk-nav-side">
+                            <li>
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=http://dokelung.me" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" taget="_blank" class="uk-button">
+                                    <i class="uk-icon-facebook-square"></i> Share
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/intent/tweet?text=http%3A//dokelung.me&url=http://dokelung.me&via=" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="uk-button" target="_blank">
+                                    <i class="uk-icon-twitter"></i> Share
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://plus.google.com/share?url=http://dokelung.me" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" target="_blank" class="uk-button">
+                                    <i class="uk-icon-google-plus-square"></i> Share
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="uk-panel jojo-share" data-uk-sticky="{top:300}">
+                        <ul class="uk-nav uk-nav-side">
+                            <li>
+                                <a href="#jojo-page-top" class="uk-button" data-uk-smooth-scroll>
+                                    <i class="uk-icon-chevron-up"></i> Top
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#jojo-page-bottum" class="uk-button" data-uk-smooth-scroll>
+                                    <i class="uk-icon-chevron-down"></i> Bot
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="uk-width-medium-7-10">
+                    <div class="uk-margin-top">
+                        <!-- content -->
+    <div id="tipue_search_content"></div>
+                    </div>
+                </div>
+                <div class="uk-width-medium-2-10">
+
+                    <!-- author info -->
+                    <div class="uk-panel uk-panel-box">
+                        <div class="uk-panel-badge uk-badge"> About Me </div>
+                        <h3 class="uk-panel-title"> dokelung </h3>
+                        <img class="uk-thumbnail uk-thumbnail-small uk-align-center"
+                             src="http://dokelung.me/images/dokelung.jpg"
+                             alt="dokelung">
+                        <p>
+                            <ul class="uk-list">
+                                   <li> I am <a href="#">a book author</a></li>
+                                   <li> I am <a href="#">a pythoner</a></li>
+                            </ul>
+                                <p> Hi, my name is Ko-Lung Yuan! </p>
+                                <p> 你好，我是 袁克倫。 </p>
+                        </p>
+                        <p class="uk-text-right">
+                            <a href="http://dokelung.me\pages\about-me"> More About Me... </a>
+                        </p>
+                        <hr>
+                            <h3 class="uk-panel-title"> Contacts </h3>
+                                <a href="dokelung@gmail.com"
+                                   class=" uk-icon-hover                                           uk-icon-medium
+                                          uk-align-left
+                                          uk-icon-envelope-square">
+                                </a>
+                                <a href="https://github.com/dokelung"
+                                   class=" uk-icon-hover                                           uk-icon-medium
+                                          uk-align-left
+                                          uk-icon-github-square">
+                                </a>
+                                <a href="https://www.linkedin.com/in/ko-lung-yuan-536b9aa3/"
+                                   class=" uk-icon-hover                                           uk-icon-medium
+                                          uk-align-left
+                                          uk-icon-linkedin-square">
+                                </a>
+                    </div>
+
+                    <!-- newest articles -->
+                    <div class="uk-panel uk-panel-box">
+                        <div class="uk-panel-badge uk-badge uk-badge-danger"> Newest </div>
+                        <h3 class="uk-panel-title"> Newest Articles </h3>
+                        <ul class="uk-list uk-list-space">
+                                <li><a href="category/pelican/test/"> 測試頁 </a></li>
+                        </ul>
+                    </div>
+
+                            <div class="uk-panel uk-panel-box">
+                                    <div class="uk-panel-badge uk-badge uk-badge-danger">
+                                        book
+                                    </div>
+                                    <h3 class="uk-panel-title"> It's django </h3>
+                                    <img class="uk-thumbnail uk-thumbnail-small uk-align-center" src="http://dokelung.me/images/its_django.jpg" alt="It's django">
+                                <p> A book about python web framework Django </p>
+                                    <p class="uk-text-right"> <a href="#"> Where to buy it? </a> </p>
+                            </div>
+
+                    <!-- related links -->
+                    <div class="uk-panel uk-panel-box">
+                       <ul class="uk-nav uk-nav-parent-icon" data-uk-nav>
+                           <li class="uk-parent">
+                               <a href="#"> Related Links </a>
+                               <ul class="uk-nav-sub">
+                                       <li><a href="http://getpelican.com/" target="_blank"> Pelican </a></li>
+                                       <li><a href="http://python.org/" target="_blank"> Python.org </a></li>
+                                       <li><a href="http://jinja.pocoo.org/" target="_blank"> Jinja2 </a></li>
+                                       <li><a href="https://github.com/lucachr/pelican-mg" target="_blank"> mg </a></li>
+                               </ul>
+                           </li>
+                       </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- footer -->
+            <footer id="jojo-page-bottum" class="uk-clearfix">
+            <div class="uk-panel uk-panel-box uk-margin-large-top uk-container-center">
+                <p class="uk-text-center">
+                    © 2017 dokelung. All rights reserved. <br>
+
+                    Code snippets in the pages are released under
+                    <a href="https://opensource.org/licenses/MIT"> The MIT License </a>
+                    , unless otherwise specified. <br><br>
+
+                    Powered by <a href= "http://docs.getpelican.com/">Pelican</a>.
+                    Theme <a href="#">jojo</a> by <a href="http://dokelung.me/">dokelung</a>
+                    powered by <a href="https://getuikit.com/v2/index.html"> uikit2 </a>
+                    inspired by <a href="https://github.com/lucachr/pelican-mg">mg</a>.
+                </p>
+            </div>
+            </footer>
+
+        </div>
+    </main>
+
+    <script src="http://dokelung.me/theme/js/tipuesearch/tipuesearch_content.js"></script>
+    <script src="http://dokelung.me/theme/js/tipuesearch/tipuesearch_set.js"></script>
+    <script src="http://dokelung.me/theme/js/tipuesearch/tipuesearch.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#tipue_search_input').tipuesearch({
+                'mode' : 'json',
+                'show': 10,
+                'newWindow': false,
+                'showURL': false,
+                'contentLocation': 'http://dokelung.me/tipuesearch_content.json'
+            });
+        });
+    </script>
+
+</body>
+</html>
