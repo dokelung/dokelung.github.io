@@ -165,11 +165,11 @@
 
         <hr class="uk-article-divider">
 
-
         <div class="uk-thumbnail uk-thumbnail-medium">
     <img src="http://dokelung.me/category/python/dont-reinvent-sandwich/images/slides_cover.png" alt="slides_cover.png">
 </div>
 
+<p>[TOC]</p>
 <p>今年的 Pycon Taiwan，有一篇我滿感興趣的演講：Don't Reinvent Sandwich - Python Decorator and Context Manager，講者是蕭聖穎先生。</p>
 <blockquote>
 <p>該演講的 <a href="https://drive.google.com/file/d/0Bz8Kfu_94VuJcVo1a1drQjhReU0/view">投影片</a> 和講者的 <a href="https://www.facebook.com/syhsiao0917?ref=ts&amp;fref=ts">Facebook</a>。</p>
@@ -682,7 +682,7 @@ content line
 <span class="k">def</span> <span class="nf">myroute</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">deco</span><span class="p">(</span><span class="n">view_func</span><span class="p">):</span>
         <span class="n">url_mapping</span><span class="p">[</span><span class="n">url</span><span class="p">]</span> <span class="o">=</span> <span class="n">view_func</span> <span class="c1"># 註冊 url 及其對應的 view function</span>
-        <span class="k">return</span> <span class="n">view_func</span> <span class="c1"># 把原函數當成修飾過的函數即可，這次修飾的重點在於註冊，而非改變原函數行為</span>
+        <span class="k">return</span> <span class="n">view_func</span> <span class="c1"># 把原函數當成修飾過的函數即可，這次的重點在於註冊，而非改變原函數行為</span>
     <span class="k">return</span> <span class="n">deco</span>
 </pre></div>
 
