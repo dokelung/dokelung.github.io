@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> dokelung.me </title>
+    <link rel="shortcut icon" href="http://dokelung.me/images/dokelung.jpg" />
+
+    <script src="http://dokelung.me/theme/js/jquery-3.1.1.min.js"></script>
+
+    <!-- extra css -->
+
+    <!-- uikit basic -->
+    <link rel="stylesheet" href="http://dokelung.me/theme/css/uikit.min.css"/>
+    <script src="http://dokelung.me/theme/js/uikit.min.js"></script>
+
+    <!-- uk components -->
+    <link rel="stylesheet" href="http://dokelung.me/theme/css/components/sticky.css"/>
+    <script src="http://dokelung.me/theme/js/components/sticky.js"></script>
+    <link rel="stylesheet" href="http://dokelung.me/theme/css/components/search.css"/>
+    <script src="http://dokelung.me/theme/js/components/search.js"></script>
+
+    <!-- self defined  -->
+    <link rel="stylesheet" href="http://dokelung.me/theme/css/highlight.css"/>
+    <link rel="stylesheet" href="http://dokelung.me/theme/css/main.css"/>
+
+</head>
+<body>
+
+    <main class="jojo-theme">
+        <div class="uk-container uk-container-center">
+
+            <!-- nav -->
+            <nav id="jojo-page-top" class="uk-navbar jojo-main-nav">
+                <a href="http://dokelung.me" class="uk-navbar-brand"> dokelung.me </a>
+
+                <ul class="uk-navbar-nav">
+                        <li >
+                            <a href="http://dokelung.me/pages/about-me"> About me </a>
+                        </li>
+                        <li class="uk-parent" data-uk-dropdown>
+                            <a href="#"> Materials </a>
+                                <div class="uk-dropdown uk-dropdown-navbar">
+                                    <ul class="uk-nav uk-nav-navbar">
+                                            <li class="uk-nav-header">
+                                                    Publications
+                                            </li>
+                                            <li >
+                                                    <a href="http://dokelung.me/pages/books"> Books </a>
+                                            </li>
+                                            <li >
+                                                    <a href="http://dokelung.me/pages/papers"> Papers </a>
+                                            </li>
+                                            <li class="uk-nav-divider">
+                                            </li>
+                                            <li >
+                                                    <a href="http://dokelung.me/pages/presentations"> Presentations </a>
+                                            </li>
+                                    </ul>
+                                </div>
+                        </li>
+                        <li >
+                            <a href="http://dokelung.me/pages/projects"> Projects </a>
+                        </li>
+                        <li class="uk-parent" data-uk-dropdown>
+                            <a href="http://dokelung.me/categories.html"> Category </a>
+                                <div class="uk-dropdown uk-dropdown-navbar">
+                                    <ul class="uk-nav uk-nav-navbar">
+                                            <li class="uk-nav-header">
+                                                    Programming
+                                            </li>
+                                            <li >
+                                                    <a href="http://dokelung.me/category/python.html"> python </a>
+                                            </li>
+                                            <li class="uk-nav-divider">
+                                            </li>
+                                            <li >
+                                                    <a href="http://dokelung.me/category/pelican.html"> pelican </a>
+                                            </li>
+                                    </ul>
+                                </div>
+                        </li>
+                        <li >
+                            <a href="http://dokelung.me/archives.html"> Archives </a>
+                        </li>
+                </ul>
+
+                <div class="uk-navbar-flip">
+                    <div class="uk-navbar-content">
+                        <form class="uk-search" data-uk-search="{source:'my-results.json'}" action="http://dokelung.me/search.html">
+                            <input id="tipue_search_input" class="uk-search-field" type="search" name="q" autocomplete="off" required placeholder="Search...">
+                        </form>
+                    </div>
+                </div>
+
+            </nav>
+
+            <div class="uk-panel uk-panel-box uk-panel-box-secondary uk-panel-hover" id="jojo-location-panel">
+                <ul class="uk-breadcrumb">
+                    <li><a href="#" class="uk-icon-map-marker"></a></li>
+                    <li><a href="http://dokelung.me"> home </a></li>
+    <li><a href="http://dokelung.me/categories.html"> category </a></li>
+    <li><a href="http://dokelung.me/category/python.html"> python </a></li>
+    <li class="uk-active"><span> Don't Reinvent Sandwich - Python 的裝飾器與環境管理器 </span></li>
+                </ul>
+            </div>
+
+            <div class="uk-grid uk-margin-large-top">
+                <div class="uk-width-medium-1-10">
+
+    <div class="uk-panel jojo-share" data-uk-sticky>
+        <ul class="uk-nav uk-nav-side">
+            <li>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=http://dokelung.me/category/python/dont-reinvent-sandwich-pythons-decorator-and-context-manager/" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" taget="_blank" class="uk-button">
+                    <i class="uk-icon-facebook-square"></i> Share
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/intent/tweet?text=Don%27t%20Reinvent%20Sandwich%20-%20Python%20%E7%9A%84%E8%A3%9D%E9%A3%BE%E5%99%A8%E8%88%87%E7%92%B0%E5%A2%83%E7%AE%A1%E7%90%86%E5%99%A8&url=http://dokelung.me/category/python/dont-reinvent-sandwich-pythons-decorator-and-context-manager/&via=" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="uk-button" target="_blank">
+                    <i class="uk-icon-twitter"></i> Share
+                </a>
+            </li>
+            <li>
+                <a href="https://plus.google.com/share?url=http://dokelung.me/category/python/dont-reinvent-sandwich-pythons-decorator-and-context-manager/" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" target="_blank" class="uk-button">
+                    <i class="uk-icon-google-plus-square"></i> Share
+                </a>
+            </li>
+        </ul>
+    </div>
+
+                    <div class="uk-panel jojo-share" data-uk-sticky="{top:300}">
+                        <ul class="uk-nav uk-nav-side">
+                            <li>
+                                <a href="#jojo-page-top" class="uk-button" data-uk-smooth-scroll>
+                                    <i class="uk-icon-chevron-up"></i> Top
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#jojo-page-bottum" class="uk-button" data-uk-smooth-scroll>
+                                    <i class="uk-icon-chevron-down"></i> Bot
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="uk-width-medium-7-10">
+                    <div class="uk-margin-top">
+                        <!-- content -->
+    <article class="uk-article">
+
+        <h1 class="uk-article-title">
+           <a href="http://dokelung.me/category/python/dont-reinvent-sandwich-pythons-decorator-and-context-manager/" rel="bookmark"> Don't Reinvent Sandwich - Python 的裝飾器與環境管理器 </a>
+        </h1>
+
+            <div class="tags">
+                <i class="uk-icon-tags"></i>
+                    <div class="uk-badge uk-badge-notification">
+                        <a href="http://dokelung.me/tag/python.html">python</a>
+                    </div>
+            </div>
+
+        <!-- meta -->
+        <p class="uk-article-meta">
+            日 25 6月 2017
+        </p>
+
+        <hr class="uk-article-divider">
+
+        <div class="uk-thumbnail uk-thumbnail-medium">
+    <img src="http://dokelung.me/category/python/dont-reinvent-sandwich-pythons-decorator-and-context-manager/images/slides_cover.png" alt="slides_cover.png">
+</div>
+
+<p>今年的 Pycon Taiwan，有一篇我滿感興趣的演講：Don't Reinvent Sandwich - Python Decorator and Context Manager，講者是蕭聖穎先生。</p>
+<blockquote>
+<p>該演講的 <a href="https://drive.google.com/file/d/0Bz8Kfu_94VuJcVo1a1drQjhReU0/view">投影片</a> 和講者的 <a href="https://www.facebook.com/syhsiao0917?ref=ts&amp;fref=ts">Facebook</a>。</p>
+</blockquote>
+<p>由於我對於語言本身的設計和使用慣例非常感興趣，所以就去朝聖了一下。講題的主旨大略是：我們通常透過抽取一段重複出現的 <strong>連續代碼</strong> 成為 <strong>函數 (function)</strong> 或 <strong>類別 (class)</strong> 來重複利用他，避免重複發明輪子。但有的時候想要抽取的部分並非 <strong>中間</strong> (
+三明治的麵包）連續的部分，而是 <strong>頭尾</strong> （三明治的麵包），這個時候我們便需要使用一些其他的手法或機制來達到 reuse 的目的了。Python 正好非常友善地提供了 <strong>裝飾器 (decorator)</strong> 和 <strong>環境管理器 (context manager)</strong>，可以很容易地達成我們的目的。</p>
+<p>這場演講給出了非常有意思的想法，尤其是裝飾器與環境管理器的互通。但很可惜的是，雖然 Python 的 decorator 和 context manager 非常有自己的特色也是許多大型專案常用的技術，但是對於初學者而言還是一個相對進階的主題，我認為初學者並不容易在這短短的四十五分鐘內了解全部的內容，所以寫了這篇文章，希望能詳細地頗析本場演講所涵蓋到的內容，期待能對大家有所幫助，不過所學慎淺，班門弄斧不免貽笑大方，那就還請講者及各路高手海涵。</p>
+<p>本文的脈絡大致會依循講者的投影片，內容的部分也是，會有適度的補充，就容我多撈叨一兩句，而較零碎的細節就容我略過不提了。</p>
+<blockquote>
+<p>另外，本文的許多例子和想法都來自 <a href="http://shop.oreilly.com/product/0636920032519.do">Fluent Python</a> 這本書，這是我迄今看過最好的 Python 書籍了。</p>
+</blockquote>
+<h2>從檔案的開關談起</h2>
+<p>Python 的檔案操作一直都是很平易近人的，使用內建的 <code>open</code> 函數來開啟檔案並且獲得回傳的 <strong>檔案物件 (file object)</strong>，最後透過檔案物件的 <code>close</code> 方法關閉檔案，大概像是這樣子：</p>
+<div class="highlight"><pre><span></span><span class="n">fp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+
+<span class="c1"># do somethings here</span>
+
+<span class="n">fp</span><span class="o">.</span><span class="n">close</span><span class="p">()</span> <span class="c1"># 這行很容易被遺忘</span>
+</pre></div>
+
+
+<p>這段 code 沒有什麼大不了的，但是人難免會有疏漏，如果我們忘記關閉檔案這個動作，可能會引發許多不良的後果。不過這種失誤還算是比較明顯的，如果我們考慮到 <code># do somethings here</code> 這段代碼可能會引發 <strong>例外(exception)</strong> 的話，這種開關檔案的方式顯然還是有待加強，我們該如何應對呢？基本上加入例外的捕捉即可，如下：</p>
+<div class="highlight"><pre><span></span><span class="n">fp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="c1"># do somethings here</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="n">fp</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+
+<p>這下我們的檔案物件無論如何都會被關閉了，可是... 這樣的代碼好醜啊！有沒有比較優雅，比較 Pythonic 的寫法呢？</p>
+<p>當然是有的，只要受過專業的 Python 訓練，大家都知道可以使用 <code>with</code> 述句：</p>
+<div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+    <span class="c1"># do somethings here</span>
+</pre></div>
+
+
+<p>太好了，原本看起來很複雜的結構霎時之間變得很單純，檔案在 <code>open</code> 之後被開啟，然後我們切進 <code>with</code> 述句的 <strong>suite</strong> 中做事，Python 會在離開 <code>with</code> 區塊的時候自動處理檔案的關閉，無論例外是否在區塊內發生。有的人可能會覺得很神奇，這是怎麼做到的？那剛好就是本文的主題之一：環境管理器。</p>
+<p>不過更值得我們注意的不只是代碼的簡潔和穩定性，而是 <strong>可被重複利用性</strong>。試想：顯性的 <code>open/close</code> 結構要怎麼重複利用呢？我們能將之抽取為一個 function 嗎？看起來的確是困難重重，因為我們想要抽取的不再是中間那連續的部分，而是頭尾那分離的部分，我們想要重用三明治的麵包！相對來說，<code>with</code> 述句和環境管理器就提供了我們一個可以重複利用頭尾的機制，我們可以重複地利用 <code>with open</code> 來套用到每一段需要開關檔案的代碼上。</p>
+<blockquote>
+<p>請讀者好好思考為什麼後面的這種結構能夠做到重複利用而前者不行，這也是本文的關鍵之處！</p>
+</blockquote>
+<h2>裝飾器 (decorator)</h2>
+<p>裝飾器是一種可以做到重複利用頭尾的機制，我們簡單地來介紹一下裝飾器的用法和寫法。</p>
+<h3>裝飾器的用法</h3>
+<p>考慮到以下兩個函數：</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">def</span> <span class="nf">snooze</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;等待s秒&quot;&quot;&quot;</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">sum_of_square</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;計算平方和&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">([</span><span class="n">n</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">])</span>
+</pre></div>
+
+
+<p>如果今天希望能夠測量這兩個函數的執行時間並將之印出，我們可能會想要修改一下我們的函數：</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">def</span> <span class="nf">snooze</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;等待s秒&quot;&quot;&quot;</span>
+    <span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="n">elapsed</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">-</span><span class="n">t0</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Run snooze({}): {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">elapsed</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">sum_of_square</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;計算平方和&quot;&quot;&quot;</span>
+    <span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">n</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">])</span>
+    <span class="n">elapsed</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">-</span><span class="n">t0</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Run sum_of_square({}): {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="n">elapsed</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+
+
+<p>天阿，才兩個函數就迫使我們大費周章地逐一修改，如果我們有更多的函數需要測量時間豈不累死人嗎？我們多希望將這些共有的部分給抽取出來呢！假設我們有一個叫做 <code>clock</code> 的裝飾器，只要被他修飾過的函數就會自我計時並且印出時間那不是很棒嗎！不過在我們學會如何寫出這樣一個裝飾器之前，我們先來看看應該怎麼使用這樣的裝飾器，在 Python 中，我們都是這樣做的：</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="nd">@clock</span>
+<span class="k">def</span> <span class="nf">snooze</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;等待s秒&quot;&quot;&quot;</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+
+<span class="nd">@clock</span>
+<span class="k">def</span> <span class="nf">sum_of_square</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;計算平方和&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">([</span><span class="n">n</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">])</span>
+</pre></div>
+
+
+<p>在函數的定義上方加上一行 <code>@裝飾器名稱</code> 就可以將我們的函數裝飾成想要的樣子了，這其實一點都不神奇，上面的做法跟：</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">def</span> <span class="nf">snooze</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;等待s秒&quot;&quot;&quot;</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+
+<span class="n">snooze</span> <span class="o">=</span> <span class="n">clock</span><span class="p">(</span><span class="n">snooze</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">sum_of_square</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;計算平方和&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">([</span><span class="n">n</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">])</span>
+
+<span class="n">sum_of_square</span> <span class="o">=</span> <span class="n">clock</span><span class="p">(</span><span class="n">sum_of_square</span><span class="p">)</span>
+</pre></div>
+
+
+<p>是一模一樣的，使用 <code>@</code> 的做法只是 Python 中的甜頭語法。</p>
+<p>其實裝飾器說穿了也就是一個函數！以下是我給出的一個定義：</p>
+<div class="highlight"><pre><span></span>裝飾器是一個函數，他能接收一個函數作為參數，並且回傳一個修飾過的函數
+</pre></div>
+
+
+<p>而通常這個修飾過的函數也會被賦值給原本的函數變數，意思是我們通常不會為修飾過的函數另取名稱，而會沿用原來的名字：</p>
+<div class="highlight"><pre><span></span><span class="c1"># 通常不會為修飾過的函數另娶名稱</span>
+<span class="n">clock_snooze</span> <span class="o">=</span> <span class="n">clock</span><span class="p">(</span><span class="n">snooze</span><span class="p">)</span>
+<span class="n">clock_sum_of_square</span> <span class="o">=</span> <span class="n">clock</span><span class="p">(</span><span class="n">sum_of_square</span><span class="p">)</span>
+
+<span class="c1"># 通常會使用原本的名稱</span>
+<span class="n">snooze</span> <span class="o">=</span> <span class="n">clock</span><span class="p">(</span><span class="n">snooze</span><span class="p">)</span>
+<span class="n">sum_of_square</span> <span class="o">=</span> <span class="n">clock</span><span class="p">(</span><span class="n">sum_of_square</span><span class="p">)</span>
+</pre></div>
+
+
+<p>之所以如此是因為我們希望這個過程看起來是 <strong>修飾</strong> 而非 <strong>取代</strong>（即使在實際作法上我們是用取代的），我們希望使用者在呼叫函數時能夠使用相同的名稱來呼叫。</p>
+<h3>裝飾器的寫法</h3>
+<p>接下來我們要關心的是如何寫出 <code>clock</code> 這個裝飾器。</p>
+<p>首先，根據定義，裝飾器是一個函數且能接收一個函數作為參數：</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">clock</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="c1"># ...</span>
+</pre></div>
+
+
+<p>而我們要回傳一個修飾過的函數，而這個函數看起來是修改原本的函數而來的，但其實我們是定義了一個新的函數來取代原本的函數:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">clock</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">new_func</span><span class="p">(</span><span class="o">...</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;裝飾過的函數&quot;&quot;&quot;</span>
+        <span class="c1"># ...</span>
+    <span class="k">return</span> <span class="n">new_func</span>
+</pre></div>
+
+
+<p>接著為了讓新的函數 <code>new_func</code> 和原本的函數有相同的回傳值，我們必須在新的函數中呼叫舊的函數（如此才會有相似的行爲，畢竟我們是要修飾！）：</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">clock</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">new_func</span><span class="p">(</span><span class="o">...</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;裝飾過的函數&quot;&quot;&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span>
+    <span class="k">return</span> <span class="n">new_func</span>
+</pre></div>
+
+
+<p>這邊還有一個問題是，裝飾器並不知道自己要裝飾怎麼樣的函數，有的函數可能只有一個參數，有的有很多個，有的函數可能只有位置參數，有的函數卻有關鍵字參數。還好 Python 有 <code>*</code> 和 <code>**</code> 可以幫助我們處理任意數量和形式的參數：</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">clock</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="c1"># 使用星號讓新的函數能夠接受任意參數，換句話說能讓裝飾器裝飾任意函數</span>
+    <span class="k">def</span> <span class="nf">new_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;裝飾過的函數&quot;&quot;&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="c1"># 呼叫原本的函數時也使用星號來進行參數拆解</span>
+        <span class="k">return</span> <span class="n">result</span>
+    <span class="k">return</span> <span class="n">new_func</span>
+</pre></div>
+
+
+<blockquote>
+<p>此步驟是裝飾器成立的關鍵，不是很好理解，請讀者多多琢磨</p>
+</blockquote>
+<p>好了，到這裡我們已經讓修飾過的函數跟原本的函數有一模一樣的行為了，接下來我們只要加上測量時間和打印的功能即可：</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">clock</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">new_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;裝飾過的函數&quot;&quot;&quot;</span>
+        <span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">elapsed</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span>
+
+        <span class="c1"># func 的 __name__ 屬性儲存著函數的名字</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">func</span><span class="o">.</span><span class="n">__name__</span>
+
+        <span class="c1"># 將呼叫時的參數值轉為可印出的字串</span>
+        <span class="n">arg_strs</span> <span class="o">=</span> <span class="p">[</span><span class="nb">repr</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span> <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">args</span><span class="p">]</span>
+        <span class="n">kwarg_strs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;{}={}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
+        <span class="n">argstr</span> <span class="o">=</span> <span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">arg_strs</span> <span class="o">+</span> <span class="n">kwarg_strs</span><span class="p">)</span>
+
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Run {}({}): {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">argstr</span><span class="p">,</span> <span class="n">elapsed</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">result</span>
+    <span class="k">return</span> <span class="n">new_func</span>
+</pre></div>
+
+
+<p>大功告成！現在我們擁有了一個可以裝飾任何函數的測時裝飾器 <code>clock</code> 了。</p>
+<blockquote>
+<p>由於 <code>clock</code> 還必須印出呼叫的函數名稱和參數值，所以會稍微複雜一點，其實一些單純一點的裝飾器寫起來是很簡單的，大家千萬不要害怕。</p>
+</blockquote>
+<h3>使用 wraps 來改善裝飾器</h3>
+<p>現在這個 <code>clock</code> 還不夠完美，為什麼呢？</p>
+<div class="highlight"><pre><span></span><span class="c1"># 這裡的 snooze 是用 clock 裝飾過的版本</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">snooze</span><span class="o">.</span><span class="n">__name__</span>
+<span class="s1">&#39;new_func&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">snooze</span><span class="o">.</span><span class="n">__doc__</span>
+</pre></div>
+
+
+<p>我們發現雖然我們用 <code>snooze</code> 這個變數來裝著裝飾過的函數，但這個函數骨子裡的名稱和文件字串都是新函數的並非原本函數的，這對於某些情境下會造成困擾，例如使用者想要查詢 <code>snooze</code> 的使用方法時：</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">help</span><span class="p">(</span><span class="n">snooze</span><span class="p">)</span>
+
+<span class="n">Help</span> <span class="n">on</span> <span class="n">function</span> <span class="n">new_func</span> <span class="ow">in</span> <span class="n">module</span> <span class="n">__main__</span><span class="p">:</span>
+
+<span class="n">new_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div>
+
+
+<p>卻會得到不預期的結果，要修正這個問題就要設法將原函數的屬性複製到新函數裡，在 <code>functools</code> 模組中有一個裝飾器 <code>wraps</code>（哈哈，也是裝飾器）可以幫助我們完成任務：</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
+
+<span class="k">def</span> <span class="nf">clock</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="c1"># wraps 會將 func 的屬性抄到 new_func 裡讓 new_func 看起來跟 func 一模一樣</span>
+    <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">new_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;裝飾過的函數&quot;&quot;&quot;</span>
+        <span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">elapsed</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">func</span><span class="o">.</span><span class="n">__name__</span>
+        <span class="n">arg_strs</span> <span class="o">=</span> <span class="p">[</span><span class="nb">repr</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span> <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">args</span><span class="p">]</span>
+        <span class="n">kwarg_strs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;{}={}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
+        <span class="n">argstr</span> <span class="o">=</span> <span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">arg_strs</span> <span class="o">+</span> <span class="n">kwarg_strs</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Run {}({}): {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">argstr</span><span class="p">,</span> <span class="n">elapsed</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">result</span>
+    <span class="k">return</span> <span class="n">new_func</span>
+</pre></div>
+
+
+<h3>帶有參數的裝飾器</h3>
+<p>接著讓我們來看看一個稍微不同的裝飾器，裝飾：</p>
+<div class="highlight"><pre><span></span><span class="nd">@tag</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">)</span>
+<span class="nd">@tag</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">content</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;content line&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>使用：</p>
+<div class="highlight"><pre><span></span>&gt;&gt;&gt; content()
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+content line
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<p><code>tag</code> 這個裝飾器可以在原函數的輸出前後印出指定的 html tag 頭尾，我們要來研究兩個點：</p>
+<ol>
+<li>如何寫出帶有參數的裝飾器</li>
+<li>裝飾器的堆疊</li>
+</ol>
+<p>我們直接來觀察他是怎麼一步一步被寫出來的，首先根據裝飾器的定義，我們會寫出：</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tag</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">new_func</span><span class="p">():</span>
+        <span class="c1"># do somethings before</span>
+        <span class="n">func</span><span class="p">()</span>
+        <span class="c1"># do somethings after</span>
+    <span class="k">return</span> <span class="n">new_func</span>
+</pre></div>
+
+
+<blockquote>
+<p>在這個例子中我們不處理參數也不處理回傳值，原因是這個裝飾氣要裝飾的函數都是屬於無參數且無回傳值的。</p>
+</blockquote>
+<p>接著我們開始進行裝飾，把印出 tag 的動作加上去：</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tag</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">new_func</span><span class="p">():</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;&lt;{}&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">TAG_NAME</span><span class="p">))</span>
+        <span class="n">func</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;&lt;/{}&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">TAG_NAME</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">new_func</span>
+</pre></div>
+
+
+<p>現在問題來了，我們要如何傳遞 <code>TAG_NAME</code> 進去給 <code>new_func</code> 呢？ 有些人覺得是這樣：</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tag</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">new_func</span><span class="p">():</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;&lt;{}&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+        <span class="n">func</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;&lt;/{}&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">new_func</span>
+</pre></div>
+
+
+<p>這樣會造成一個問題，我們的確可以這樣裝飾 <code>content</code>：</p>
+<div class="highlight"><pre><span></span><span class="n">content</span> <span class="o">=</span> <span class="n">tag</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="s1">&#39;p&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>但卻沒辦法寫成 <code>@</code> 的形式，原因是 <code>@</code> 後面跟著的裝飾器函數必須是個單參數函數。</p>
+<p>要解決這個問題，我們可以製造另一個函數，此函數會回傳真正的裝飾器：</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tag</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="c1"># 這個才是真正的裝飾器，為了把 tag 讓給更上一層的函數，這裡我們使用 `deco` 這個名字</span>
+    <span class="k">def</span> <span class="nf">deco</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+        <span class="nd">@wraps</span>
+        <span class="k">def</span> <span class="nf">new_func</span><span class="p">():</span>
+            <span class="k">print</span><span class="p">(</span><span class="s1">&#39;&lt;{}&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+            <span class="n">func</span><span class="p">()</span>
+            <span class="k">print</span><span class="p">(</span><span class="s1">&#39;&lt;/{}&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">new_func</span>
+     <span class="k">return</span> <span class="n">tag</span>
+</pre></div>
+
+
+<p>我們把結構多加了一層，當我們呼叫 <code>tag(TAG_NAME)</code> 時，會得到一個真正的裝飾器，接著才呼叫該裝飾器來得到一個裝飾後的函數：</p>
+<div class="highlight"><pre><span></span><span class="n">ptag</span> <span class="o">=</span> <span class="n">tag</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">)</span> <span class="c1"># ptag 才是真正的裝飾器</span>
+<span class="n">content</span> <span class="o">=</span> <span class="n">ptag</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+
+<span class="c1"># 或是使用 @ 的語法寫出來</span>
+<span class="nd">@ptag</span>
+<span class="k">def</span> <span class="nf">content</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;content line&#39;</span><span class="p">)</span>
+
+<span class="c1"># 或直接在 @ 的那一行呼叫 tag 製造真正的裝飾器</span>
+<span class="nd">@tag</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">)</span> <span class="c1"># 這一行相當於 @ptag，也就是說 tag(&#39;p&#39;) 才是直接作用的裝飾器，tag 只是製造裝飾器的函數</span>
+<span class="k">def</span> <span class="nf">content</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;content line&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<h3>裝飾器的堆疊</h3>
+<p>接著我們討論到裝飾器的堆疊，我們發現可以同時用若干個裝飾器去裝是一個函數，其裝飾的順序是由裡而外，這是非常顯而易見的，當我們看到：</p>
+<div class="highlight"><pre><span></span><span class="nd">@tag</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">)</span>
+<span class="nd">@tag</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">content</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;content line&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>其實相當於：</p>
+<div class="highlight"><pre><span></span><span class="n">divtag</span> <span class="o">=</span> <span class="n">tag</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">)</span>
+<span class="n">ptag</span> <span class="o">=</span> <span class="n">tag</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">)</span>
+
+<span class="n">content</span> <span class="o">=</span> <span class="n">content</span><span class="p">(</span><span class="n">divtag</span><span class="p">(</span><span class="n">ptag</span><span class="p">(</span><span class="n">content</span><span class="p">)))</span>
+</pre></div>
+
+
+<p><code>content</code> 會先被 <code>ptag</code> 也就是 <code>tag('p')</code> 裝飾，接著才被 <code>divtag</code> 也就是 <code>tag('div')</code> 裝飾。其實只要我們將裝飾器的甜頭語法還原回去，便很容易理解裝飾器的原理和行為。</p>
+<p>這邊我們也順帶了解到一種用法，我們可以透過 <code>tag('p')</code> 和 <code>tag('div')</code> 先行製造常用的裝飾器來使用，比如我們以後就可以直接這樣寫了：</p>
+<div class="highlight"><pre><span></span><span class="nd">@divtag</span>
+<span class="nd">@ptag</span>
+<span class="k">def</span> <span class="nf">content</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;content line&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<h3>裝飾器的範例</h3>
+<p>裝飾器有相當多的用途和範例，這邊作者就不多做說明了，讀者可以參考講者的 <a href="https://drive.google.com/file/d/0Bz8Kfu_94VuJcVo1a1drQjhReU0/view">投影片</a>，裡面提到的應用包含：</p>
+<ul>
+<li>function log</li>
+<li>top function exception</li>
+<li>click_</li>
+<li>cache_json(mock function by modified file)</li>
+</ul>
+<h3>常用的內建裝飾器</h3>
+<p>除了我們自行撰寫的裝飾器之外，Python 也有需多內建的裝飾器，例如內建函數中就有：</p>
+<ul>
+<li><code>property</code></li>
+<li><code>classmethod</code></li>
+<li><code>staticmethod</code></li>
+</ul>
+<p>這三種用來裝飾 <strong>類別方法</strong> 的裝飾器。</p>
+<p>而在 <code>functools</code> 中也有三個很實用的裝飾器，分別是：</p>
+<ul>
+<li><code>functools.wraps</code></li>
+<li><code>functools.lru_cache</code></li>
+<li><code>functools.singeldispatch</code></li>
+</ul>
+<p>除了我們介紹過的 <code>wraps</code> 之外，這裡也順帶介紹一下講者有提到的 <code>lru_cache</code>。</p>
+<h3>functools.lru_cache</h3>
+<p>這邊講者有個小小錯誤（應該是不小心記錯了，其實每次這種縮寫我是根本不記得到底指的是什麼），lru cache 的意思並非 latest-recently-used cache（最近一次的常用快取），而是 least-recently-used（最小的常用快取），意思是他並不會緩存所有的項目，只會記憶最近一段時間的常用項目，太久沒有被讀取的項目會被移出緩存區。</p>
+<p>我們來看一個使用範例：</p>
+<div class="highlight"><pre><span></span><span class="nd">@clock</span> <span class="c1"># 使用前面我們自行定義的 clcok 裝飾器</span>
+<span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;求取費氏數列的第n項&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span>
+    <span class="k">return</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+
+<blockquote>
+<p>這裡我使用的是 Fluent Python 一書中的範例，講者在投影片中也有一個 <code>heavy_job</code> 的範例，大家可以自行參考。</p>
+</blockquote>
+<p>以下是使用範例：</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">Run</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span> <span class="mf">9.5367431640625e-07</span>
+<span class="n">Run</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">0</span><span class="p">):</span> <span class="mf">1.9073486328125e-06</span>
+<span class="n">Run</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span> <span class="mf">0.0001251697540283203</span>
+<span class="n">Run</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span> <span class="mf">9.5367431640625e-07</span>
+<span class="n">Run</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span> <span class="mf">0.0001609325408935547</span>
+<span class="n">Run</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span> <span class="mf">9.5367431640625e-07</span>
+<span class="n">Run</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">0</span><span class="p">):</span> <span class="mf">0.0</span>
+<span class="n">Run</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span> <span class="mf">3.695487976074219e-05</span>
+<span class="n">Run</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span> <span class="mf">0.00023412704467773438</span>
+<span class="n">Run</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span> <span class="mf">1.1920928955078125e-06</span>
+<span class="n">Run</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">0</span><span class="p">):</span> <span class="mf">0.0</span>
+<span class="n">Run</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span> <span class="mf">3.409385681152344e-05</span>
+<span class="n">Run</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span> <span class="mf">1.1920928955078125e-06</span>
+<span class="n">Run</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span> <span class="mf">7.200241088867188e-05</span>
+<span class="n">Run</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span> <span class="mf">0.00033593177795410156</span>
+<span class="n">Run</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span> <span class="mf">0.0</span>
+<span class="n">Run</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">0</span><span class="p">):</span> <span class="mf">1.1920928955078125e-06</span>
+<span class="n">Run</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span> <span class="mf">2.8133392333984375e-05</span>
+<span class="n">Run</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span> <span class="mf">9.5367431640625e-07</span>
+<span class="n">Run</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span> <span class="mf">6.389617919921875e-05</span>
+<span class="n">Run</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span> <span class="mf">0.0</span>
+<span class="n">Run</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">0</span><span class="p">):</span> <span class="mf">9.5367431640625e-07</span>
+<span class="n">Run</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span> <span class="mf">3.504753112792969e-05</span>
+<span class="n">Run</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span> <span class="mf">0.00013399124145507812</span>
+<span class="n">Run</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span> <span class="mf">0.0005078315734863281</span>
+<span class="mi">8</span>
+</pre></div>
+
+
+<p>由於 <code>fibonacci</code> 是一個遞迴函數，所以我們發現中間有不少計算重複了，如果要避免這種情形我們可以這樣做：</p>
+<div class="highlight"><pre><span></span><span class="nb">dict</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="nd">@clock</span> <span class="c1"># 使用前面我們自行定義的 clcok 裝飾器</span>
+<span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;求取費氏數列的第n項&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">dict</span><span class="p">:</span>
+        <span class="k">pass</span>
+    <span class="k">elif</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="nb">dict</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">n</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">dict</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">dict</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+</pre></div>
+
+
+<p>但這樣做還不夠好，因為原本簡潔的函數現在變得很複雜，但使用 <code>lru_cache</code> 就能很好地解決這個問題：</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">lru_cache</span>
+
+<span class="nd">@lru_cache</span><span class="p">()</span>
+<span class="nd">@clock</span> <span class="c1"># 使用前面我們自行定義的 clcok 裝飾器</span>
+<span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;求取費氏數列的第n項&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span>
+    <span class="k">return</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+
+<p>首先要注意的是，<code>lru_cache</code> 是帶參數的裝飾器，所以我們必須先呼叫他來取得直接作用的裝飾器，只是它允許不給參數。</p>
+<p>結果：</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">Run</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span> <span class="mf">1.1920928955078125e-06</span>
+<span class="n">Run</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">0</span><span class="p">):</span> <span class="mf">2.1457672119140625e-06</span>
+<span class="n">Run</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span> <span class="mf">0.00012111663818359375</span>
+<span class="n">Run</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span> <span class="mf">0.00014090538024902344</span>
+<span class="n">Run</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span> <span class="mf">0.0001609325408935547</span>
+<span class="n">Run</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span> <span class="mf">0.0001819133758544922</span>
+<span class="n">Run</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span> <span class="mf">0.0002009868621826172</span>
+<span class="mi">8</span>
+</pre></div>
+
+
+<p>很顯然地，對於費氏數列的每一項計算我們都只需要呼叫一次函數，這是因為計算過的結果已經被緩存起來了，當重複的運算要被執行時，<code>lru_cache</code> 會先從快取中尋找計算的結果。</p>
+<p><code>lru_cache</code> 的原理很簡單，他利用 字典(dictionary) 來作為緩存區，每一次的函數呼叫，都會將該次呼叫的引數當作字典的 <strong>鍵(key)</strong>，將其回傳值當作字典的 <strong>值(value)</strong>，將此鍵值對存入字典中以便下次查詢。</p>
+<blockquote>
+<p>由這裡我們發現，<code>lru_cache</code> 的使用必須要注意一件事，那就是被 <code>lru_cache</code> 裝飾的函數，其所使用的引數都必須是 <strong>可雜湊的(hashable)</strong>。</p>
+</blockquote>
+<p><code>lru_cache</code> 有兩個可選的參數，一個是 <code>maxsize</code>，用以指定緩存區的大小，代表著有多少呼叫的結果會被儲存，一旦緩存被填滿，較舊的結果將會被丟棄。</p>
+<p>另外一個參數是 <code>typed</code> ，這是個布林值，預設是 <code>False</code>。當它被設為 <code>True</code>時 ，一些同值但不同型的資料 (例如整數 <code>1</code> 與浮點數 <code>1.0</code>) 會被視為不同的緩存鍵值。</p>
+<h3>用裝飾器來註冊函數</h3>
+<p>接著讓我們來介紹一個小 trick，通常我們會在裝飾器中製造一個新的函數用以取代原函數以達到 <strong>裝飾</strong> 的效果，而為了展現與原函數相似的行為，我們會在此新函數內呼叫原函數，而裝飾的部分大致上會展現在新函數中原函數被呼叫的前後，這樣說明有點難以明白，我們直接看例子：</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">deco</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">new_function</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># 裝飾點1: 在原函數呼叫之前做些什麼...</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="c1"># 裝飾點2: 在原函數呼叫之後做些什麼...</span>
+        <span class="k">return</span> <span class="n">result</span>
+    <span class="k">return</span> <span class="n">new_function</span>
+</pre></div>
+
+
+<p>上面是一個典型的裝飾器結構，通常我們會在 <code>裝飾點1</code> 和 <code>裝飾點2</code> 這兩個地方做手腳來改變原本函數的行為，但其實還有一個地方可以利用：</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">deco</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="c1"># 裝飾點3: 在裝飾的當下註冊函數 func ...</span>
+    <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">new_function</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># 裝飾點1: 在原函數呼叫之前做些什麼 ...</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="c1"># 裝飾點2: 在原函數呼叫之後做些什麼 ...</span>
+        <span class="k">return</span> <span class="n">result</span>
+    <span class="k">return</span> <span class="n">new_function</span>
+</pre></div>
+
+
+<p>沒錯，我們不必等到裝飾過的新函數被呼叫了才進行裝飾的動作，我們可以在 <strong>裝飾的當下</strong> 立刻將原函數給註冊起來，比如說在 Flask 等 web 框架中會使用到的 url mapping 機制就是這樣完成的，我們直接來看範例：</p>
+<blockquote>
+<p>這個範例中，作者寫了一個跟 <code>flask.Flask.route</code> 類似的裝飾器，但當然是簡化許多的版本。</p>
+</blockquote>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
+
+<span class="n">url_mapping</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">def</span> <span class="nf">myroute</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">deco</span><span class="p">(</span><span class="n">view_func</span><span class="p">):</span>
+        <span class="n">url_mapping</span><span class="p">[</span><span class="n">url</span><span class="p">]</span> <span class="o">=</span> <span class="n">view_func</span> <span class="c1"># 註冊 url 及其對應的 view function</span>
+        <span class="k">return</span> <span class="n">view_func</span> <span class="c1"># 把原函數當成修飾過的函數即可，因為這次修飾的重點在於註冊，而非改變原函數行為</span>
+    <span class="k">return</span> <span class="n">deco</span>
+</pre></div>
+
+
+<blockquote>
+<p>這個結構跟一開始介紹的裝飾器不大相同，讀者可能會很疑惑，但事實上，裝飾器不一定要製造並回傳一個新函數，他也可以單純的製造一個空間和時機讓我們能夠註冊要被裝飾的原函數。也就是說，有的時候裝飾不見得是改變函數行為，<strong>記憶</strong> 函數也可以是裝飾的一環。</p>
+</blockquote>
+<p>有了 <code>myroute</code> 之後，我就可以用它來裝飾我所有的 <strong>視圖函數(view function)</strong>，並且將 url mapping 記憶在字典中：</p>
+<div class="highlight"><pre><span></span><span class="nd">@myroute</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;Index Page&#39;</span>
+
+<span class="nd">@myroute</span><span class="p">(</span><span class="s1">&#39;/hello&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;Hello, World&#39;</span>
+</pre></div>
+
+
+<p>我們來看看裝飾過後製造出來的字典 <code>url_mapping</code> 長什麼樣子：</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">url_mapping</span>
+<span class="p">{</span><span class="s1">&#39;/&#39;</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">function</span> <span class="n">__main__</span><span class="o">.</span><span class="n">index</span><span class="o">&gt;</span><span class="p">,</span> <span class="s1">&#39;/hello&#39;</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">function</span> <span class="n">__main__</span><span class="o">.</span><span class="n">hello</span><span class="o">&gt;</span><span class="p">}</span>
+</pre></div>
+
+
+<p>很好，我們利用註冊完成了 url 映射的功能了！</p>
+<h3>裝飾器小結</h3>
+<p>在這篇文章的前半部，我們認識了裝飾器的基本用法與寫法，學到了用 <code>functools.wraps</code> 來完善裝飾器的做法，更了解到了帶有參數的裝飾器是如何完成的。接著，我們談及了裝飾器的範例和介紹了內建可用的幾個裝飾器，最後用裝飾器提供的額外修飾空間完成了函數註冊的功能。</p>
+<p>其實裝飾器的應用遠不止此，其議題也不勝枚舉，包含變數範圍，non local 與 closure 的問題，有興趣的讀者可以去找尋更多有關的資料，但礙於本文篇幅及講者演講的範圍，只好忍痛割捨了。</p>
+<blockquote>
+<p>其實只是作者懶了ＸＤ，非常建議大家馬上去買一本 Fluent Python，保證可以從 Luciano 大叔身上學到不少！</p>
+</blockquote>
+<h2>環境管理器</h2>
+<p>接著我們進入另一個主題：<strong>環境管理器(context manager)</strong> 或又稱 <strong>情境管理器</strong>。</p>
+<p>環境管理器是一個能夠撘配 <code>with</code> 述句使用的類別，他能夠在切入環境時進行 <strong>環境的設定</strong> 和若干 <strong>預處理</strong> 的行為，並且能夠在離開環境時進行 <strong>重置</strong> 並做 <strong>善後處理</strong>（包含處理例外的發生）。</p>
+<p>我們在 <a href="https://www.python.org/dev/peps/pep-0343/">PEP 343 -- The "with" Statement</a> 中，可以了解到 <code>with</code> 和 環境管理器的基本概念，同時裡面有點出了一個重要的概念就是：</p>
+<blockquote>
+<p>with statement makes it possible to factor out standard uses of try/finally statements</p>
+</blockquote>
+<p>這也是為什麼現在檔案的開關都建議使用 <code>with as</code> 的寫法了。 </p>
+<h3>環境管理器的寫法和用法</h3>
+<p>一個基本而標準的環境管理器是一個具備 <code>__enter__</code> 和 <code>__exit__</code> 的類別。</p>
+<p>下面是一個用來計時的環境管理器：</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">class</span> <span class="nc">Clock</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;用以計時的環境管理器&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;start&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exc_type</span><span class="p">,</span> <span class="n">exc_value</span><span class="p">,</span> <span class="n">traceback</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;stop&#39;</span><span class="p">)</span>
+        <span class="n">elapsed</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">t0</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;elapsed {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">elapsed</span><span class="p">))</span>
+        <span class="k">return</span> <span class="bp">True</span>
+</pre></div>
+
+
+<p>用法：</p>
+<div class="highlight"><pre><span></span><span class="n">clock</span> <span class="o">=</span> <span class="n">Clock</span><span class="p">()</span>  <span class="c1"># 產生 clock 實例</span>
+
+<span class="k">with</span> <span class="n">clock</span> <span class="k">as</span> <span class="n">clock</span><span class="p">:</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+
+<p>效果：</p>
+<div class="highlight"><pre><span></span>start
+stop
+elapsed 3.0003809928894043
+</pre></div>
+
+
+<h3>進入環境</h3>
+<p>首先，<code>with</code> 後面要跟著環境管理器的 <strong>實例(instance)</strong>，也就是 <code>Clock</code> 類別產生的 <code>clock</code> 物件，此時 Python 會呼叫 <code>clock</code> 的 <code>__enter__</code> 表示開始切入環境，於是印出了 <code>start</code> 字樣，這個時候 <code>clock</code> 的屬性 <code>t0</code> 也會保存著切入環境的起始時間，最後回傳自己（<code>clock</code>）並賦值給 <code>as</code> 後面的變數。</p>
+<p>這邊有一個重點就是：<code>as</code> 後面的變數來自於 <code>__enter__</code> 的回傳值，而在許多例子中，<code>__enter__</code> 會回傳自己，也就是環境管理器本身，原因是環境管理器可能身負環境管理之外的其他職責。</p>
+<p>例如我們常見的檔案開關：</p>
+<div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+    <span class="c1"># do somethings here</span>
+</pre></div>
+
+
+<p><code>open</code> 函數回傳的是一個檔案物件，但他也同時被當成環境管理器使用（因為 <code>open</code> 的回傳值放在 <code>with</code> 後面，所以可以知道檔案物件就是一個環境管理器），為了能在 <code>with</code> 的子區塊中使用檔案物件，我們必須利用 <code>as</code> 將此物件賦值給 <code>fp</code>，而這個動作靠的就是讓環境管理器的 <code>__enter__</code> 回傳自己。</p>
+<blockquote>
+<p>初學者常容易搞混，以為 <code>fp</code> 是呼叫 <code>open</code> 的回傳值，但其實中間隔了一層，<code>fp</code> 是透過環境管理器的 <code>__enter__</code> 拿到的，只是剛好 <code>__enter__</code> 回傳的就是環境管理器本身。</p>
+</blockquote>
+<p>不過這裡還是要提醒大家，<code>__enter__</code> 方法是允許不回傳自己的，也就是說述句 <code>with A as B</code> 中，<code>A</code> 並不一定等於 <code>B</code>。</p>
+<p>另外，如果在區塊內不需要使用到 <code>__enter__</code> 回傳值的話，<code>with</code> 述句也可以完全不用有 <code>as</code>，這也代表了某些情境之下，<code>__enter__</code> 不一定要有回傳值。其實，在 <code>Clock</code> 這個例子中，<code>clock</code> 物件在 <code>with</code> 中並不需要用到，我們大可省略 <code>__enter__</code> 的回傳動作和 <code>with as</code> 中的 <code>as</code> 部分。 </p>
+<h3>離開環境</h3>
+<p>在 <code>time.sleep(3)</code> 執行完畢之後，我們會離開 <code>with</code> 區塊，這個時候環境管理器 <code>clock</code> 的 <code>__exit__</code> 會被呼叫。於是 <code>stop</code> 被打印出來，接著 <code>elapsed</code> 在這裡被計算和印出。</p>
+<p>這裡值得注意的是 <code>__exit__</code> 的參數和回傳值，我們從他的參數開始談起。</p>
+<p>由於環境管理器肩負著一個重要使命：對於任何狀況都要能夠妥當地善後，並確保任何問題會被正確處理，所以必定存在著一個處理例外的機制。</p>
+<p>當 <code>with</code> 區塊內引發了例外且該例外在區塊內沒有被捕捉，此時例外不會馬上被傳播出去，他會被當成 <strong>參數</strong> 傳給 <code>__exit__</code> 方法，其一是確保例外發生時，<code>__exit__</code> 方法也會運作進行善後，其二是我們能在 <code>__exit__</code> 方法中正確處理例外。</p>
+<p><code>__exit__</code> 一共有三個參數，分別是：</p>
+<ul>
+<li><code>exc_type</code>: 例外類別（例如：<code>ZeroDivisionError</code>）</li>
+<li><code>exc_value</code>: 例外實例 (例如：<code>division by zero</code>)</li>
+<li><code>traceback</code>: traceback 物件</li>
+</ul>
+<p>但如果 <code>with</code> 區塊中沒有例外發生或例外已被捕捉，上述的參數值都將會是 <code>None</code>，例如剛剛看到的 <code>time.sleep(3)</code> 這個例子。</p>
+<p>而 <code>__exit__</code> 的回傳值代表著例外有沒有被妥善處理，若回傳 <code>True</code> 以外的值，則 <code>with</code> 區塊中若有例外發生將會被傳播出去。</p>
+<h3>等價代碼</h3>
+<p>為了讓讀者能夠更清楚了解環境管理器的運作，下面提供了一段不使用 <code>with</code> 的等價代碼，來展示 <code>clock</code> 這個環境管理器不搭配 <code>with</code> 時應該如何運作：</p>
+<div class="highlight"><pre><span></span><span class="n">clock</span> <span class="o">=</span> <span class="n">Clock</span><span class="p">()</span>  <span class="c1"># 產生 clock 實例</span>
+
+<span class="c1"># 使用 with 的環境管理器</span>
+<span class="k">with</span> <span class="n">clock</span> <span class="k">as</span> <span class="n">clock</span><span class="p">:</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># 不使用 with 的環境管理器，此段代碼等價於上段代碼</span>
+<span class="n">clock</span> <span class="o">=</span> <span class="n">clock</span><span class="o">.</span><span class="n">__enter__</span><span class="p">()</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">timte</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span> <span class="c1"># 發生例外，捕捉並當成參數傳入 __exit__</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">clock</span><span class="o">.</span><span class="n">__exit__</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">e</span><span class="p">),</span> <span class="n">e</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">__traceback__</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="n">e</span> <span class="c1"># 如果例外沒有被正確處理，將之傳播出去</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">clock</span><span class="o">.</span><span class="n">__exit__</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span> <span class="c1"># 沒有例外發生，例外參數值都是 None</span>
+</pre></div>
+
+
+<h3>更複雜的管理器</h3>
+<p>這裡讓我們來實做一個更複雜的環境管理器：一個新版的 <code>Clock</code>，與最初版本的不同在於，他能夠儲存多筆計時資料：</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">class</span> <span class="nc">Clock</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;用以計時的環境管理器&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">record</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exc_type</span><span class="p">,</span> <span class="n">exc_value</span><span class="p">,</span> <span class="n">traceback</span><span class="p">):</span>
+        <span class="n">elapsed</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">t0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">record</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">elapsed</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">elapsed</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">report</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">record</span><span class="p">)</span>
+</pre></div>
+
+
+<p>我們來瞧瞧他是如何被使用的：</p>
+<div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">Clock</span><span class="p">(</span><span class="s1">&#39;snooze 3&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">clock</span><span class="p">:</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="n">clock</span><span class="p">(</span><span class="s1">&#39;snooze 5&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">clock</span><span class="p">:</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="n">clock</span><span class="o">.</span><span class="n">report</span><span class="p">()</span>
+</pre></div>
+
+
+<p>結果：</p>
+<div class="highlight"><pre><span></span><span class="mf">3.000840902328491</span>
+<span class="mf">5.00306510925293</span>
+<span class="p">{</span><span class="s1">&#39;snooze 5&#39;</span><span class="p">:</span> <span class="mf">5.00306510925293</span><span class="p">,</span> <span class="s1">&#39;snooze 3&#39;</span><span class="p">:</span> <span class="mf">3.000840902328491</span><span class="p">}</span>
+</pre></div>
+
+
+<p>這裡有幾個重點：</p>
+<ol>
+<li>我們第一次使用 <code>Clock</code> 的時候，是直接在 <code>with</code> 述句中進行實例化的，這跟 <code>open</code> 的使用習慣類似。</li>
+<li><code>Clock</code> 的 <code>__enter__</code> 也是回傳傳自己，所以 <code>clock</code> 就是 <code>Clock()</code>。</li>
+<li><code>clock</code> 是可以重複利用的，第二次的 <code>with</code> 述句，我們使用了同一個環境管理器。</li>
+<li>為了讓每一次的計時可以有一個名稱，我們會傳入一個字串，同時，為了能夠使用同一個環境管理器，我們實作了 <code>__call__</code> ，讓物件也變的可呼叫，才能傳遞該字串參數。</li>
+<li>由這個例子我們發現，一個環境管理器並不一定是一個單純的環境管理器，他也能有 <code>__enter__</code> 和 <code>__exit__</code> 以外的方法，例如： <code>report</code>。</li>
+</ol>
+<blockquote>
+<p>建議讀者去猜測、閱讀和思考檔案物件的實作方法，一定能大有收穫！</p>
+</blockquote>
+<h3>環境管理器的範例</h3>
+<p>環境管理器也有相當多的用途和範例，讀者可以參考講者的 <a href="https://drive.google.com/file/d/0Bz8Kfu_94VuJcVo1a1drQjhReU0/view">投影片</a>，裡面提到的應用包含：</p>
+<ul>
+<li>tempfile</li>
+<li>dump print to file: use <code>refirect_stdout</code></li>
+<li>change loggin level</li>
+<li>simulation precision</li>
+<li>pytest test exception</li>
+<li>timeit（跟 <code>clock</code> 很像的應用）</li>
+</ul>
+<h3>contextlib 公用程式</h3>
+<p>雖然 Python 提供了環境管理器的協定（包含 <code>with</code>、<code>__enter__</code>、<code>__exit__</code>），使得類別形式的環境管理器已經優於許多語言了，但每次都要重刻一次環境管理器類別，套用樣板，也太過麻煩，還好 Python 在其標準函式庫中提供了 <code>contextlib</code> 模組，裡面包含了許多有用東西能讓我們避免自己製作一個管理器類別，包含：</p>
+<ul>
+<li><code>@contextmanager</code></li>
+<li><code>closing</code></li>
+<li><code>suppress</code></li>
+<li><code>redirect_stdout</code></li>
+<li><code>redirect_stderr</code></li>
+<li><code>ExitStack</code></li>
+<li><code>ContextDecorator</code></li>
+</ul>
+<blockquote>
+<p>有興趣的讀者可以看一下 <a href="https://docs.python.org/3.6/library/contextlib.html">contextlib — Utilities for with-statement contexts</a></p>
+</blockquote>
+<p>這邊我們只介紹一個被廣泛應用的裝飾器：<code>contextmanager</code>，他能夠裝飾一個僅含有 <strong>單一yield</strong> 的產生器函數使之成為一個環境管理器。</p>
+<h3>使用 generator 來實作環境管理器</h3>
+<p>我們來看看剛剛第二版的類別型管理器要如何使用 <strong>產生器(generator)</strong> 加上 <code>contextmanager</code> 來改寫：</p>
+<p>首先產生器函數中會有一個 <code>yield</code>（這是產生器函數的定義），但只會有一個（這是 <code>contextmanager</code> 的要求）：</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">contextmanager</span> <span class="c1"># 從 contextlib 中匯入 contextmanager 裝飾器</span>
+
+<span class="nd">@contextmanager</span>
+<span class="k">def</span> <span class="nf">clock</span><span class="p">():</span>
+    <span class="c1"># 原本 __enter__ 做的事</span>
+    <span class="k">yield</span>
+    <span class="c1"># 原本 __exit__ 做的事</span>
+</pre></div>
+
+
+<p>接著我們把原本要放在 <code>__enter__</code> 中做的事情寫到 <code>yield</code> 前面：</p>
+<div class="highlight"><pre><span></span><span class="nd">@contextmanager</span>
+<span class="k">def</span> <span class="nf">clock</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;start&#39;</span><span class="p">)</span>
+    <span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="k">yield</span>
+    <span class="c1"># 原本 __exit__ 做的事</span>
+</pre></div>
+
+
+<p>接著我們將 <code>__enter__</code> 要回傳的東西當作 <code>yield</code> 要產生的東西，原本我們回傳 <code>self</code>，不過這裡並沒有所謂的 <code>self</code>，而且其實 <code>clock</code> 並沒有在 <code>with</code> 中被使用到，所以，我們就純粹地寫一個 <code>yield</code>，讓他產生 <code>None</code> 就可以了。</p>
+<p>最後讓我們將 <code>__exit__</code> 中要做的事情寫到 <code>yield</code> 後面：</p>
+<div class="highlight"><pre><span></span><span class="nd">@contextmanager</span>
+<span class="k">def</span> <span class="nf">clock</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;start&#39;</span><span class="p">)</span>
+    <span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="k">yield</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;stop&#39;</span><span class="p">)</span>
+    <span class="n">elapsed</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;elapsed {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">elapsed</span><span class="p">))</span>
+</pre></div>
+
+
+<p>完成！是不是看起來簡潔多了！</p>
+<p>而這樣的寫法在使用上也幾乎沒有什麼區別：</p>
+<div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">clock</span><span class="p">():</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+
+<p>唯二的差別在於：</p>
+<ol>
+<li>原本環境管理器是類別實例化來的：<code>Clock()</code>，現在是使用產生器函數產生一個產生器：<code>clock()</code>。</li>
+<li>我們在 <code>with</code> 區塊內沒有要使用到 <code>clock()</code>，所以直接省去了 <code>with A as B</code> 中的 <code>as B</code>。</li>
+</ol>
+<p>不過這樣的做法必須要注意一件事情，那就是用來當作環境管理器的產生器函數中只能有一個 <code>yield</code> 被執行。</p>
+<blockquote>
+<p>詳細的原因也建議大家去讀 <code>contextmanager</code> 的代碼，我們在此就不多做討論，不過讀者們可以自己試試看能不能寫出 <code>contextmanager</code> 裝飾器，如果裝飾器的原理、產生器（協同程式）的原理和環境管理器的原理都已經明白的話，我們也能夠自己寫出！</p>
+</blockquote>
+<p>接著我們來討論產生器函數形式的管理器如何處理例外，在類別型管理器中，Python 會自動捕捉例外並將之當成 <code>__exit__</code> 方法的參數，而我們可以在 <code>__exit__</code> 方法中做適當的處理，那產生器函數型的管理器該如何處理呢？</p>
+<p>我們考慮以下的使用情境：</p>
+<div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">clock</span><span class="p">():</span>
+    <span class="mi">1</span><span class="o">/</span><span class="mi">0</span> <span class="c1"># 此處將會引發例外</span>
+</pre></div>
+
+
+<p>這個例外不但阻止了 <code>with</code> 區塊內其他代碼的執行，更使得 <code>__exit__</code> 方法的行為，也就是離開環境時要做的後處理被忽略了。這個例子的狀況倒是還好，就只是 <code>elapsed time</code> 沒有被印出，但如果是開關檔案的動作就會造成一定程度以上的危險，因為環境不會被切回來，檔案可能不會被關閉。</p>
+<p>要處理這樣的例外，我們得讓 <code>yield</code> 出現在 <code>try/except</code> 結構中來捕捉例外，同時原本離開環境時要做的事情，也得放到 <code>finally</code> 區塊中：</p>
+<div class="highlight"><pre><span></span><span class="nd">@contextmanager</span>
+<span class="k">def</span> <span class="nf">clock</span><span class="p">():</span>
+    <span class="c1"># 進入環境時要做的動作</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;start&#39;</span><span class="p">)</span>
+    <span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+    <span class="c1"># 處理例外</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">yield</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+    <span class="c1"># 離開環境時要做的動作</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;stop&#39;</span><span class="p">)</span>
+        <span class="n">elapsed</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;elapsed {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">elapsed</span><span class="p">))</span>
+</pre></div>
+
+
+<p>結果：</p>
+<div class="highlight"><pre><span></span><span class="n">start</span>
+<span class="n">division</span> <span class="n">by</span> <span class="n">zero</span>
+<span class="n">stop</span>
+<span class="n">elapsed</span> <span class="mf">2.7894973754882812e-05</span>
+</pre></div>
+
+
+<blockquote>
+<p>在 <a href="http://shop.oreilly.com/product/0636920032519.do">Fluent Python</a> 中，作者引用了 Leonardo Rochael 的註解，說明了使用 <code>contextmanager</code> 的代價：</p>
+<blockquote>
+<p>在 <code>yield</code> 外面包上 <code>try/finally</code>（或 <code>with</code> 區塊），是使用 <code>@contextmanager</code> 時必須付出的代價，因為你永遠不知道環境管理器的使用者會在他們的 <code>with</code> 區塊裡面做什麼。</p>
+</blockquote>
+</blockquote>
+<h3>巢狀的 with 述句</h3>
+<p>還記得前面我們使用了 <code>tag</code> 裝飾器和堆疊的手法在原函數的輸出前後印出指定的 html tag 頭尾：</p>
+<div class="highlight"><pre><span></span><span class="nd">@tag</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">)</span>
+<span class="nd">@tag</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">content</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;content line&#39;</span><span class="p">)</span>
+
+<span class="n">content</span><span class="p">()</span>
+</pre></div>
+
+
+<p>這裡我們也能夠用巢狀的 <code>with</code> 和環境管理器來做到：</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">content</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;content line&#39;</span><span class="p">)</span>
+
+<span class="nd">@contextmanager</span>
+<span class="k">def</span> <span class="nf">tag</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;&lt;{}&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+    <span class="k">yield</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;&lt;/{}&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+
+<span class="k">with</span> <span class="n">tag</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">tag</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">):</span>
+        <span class="n">content</span><span class="p">()</span>
+</pre></div>
+
+
+<p>原因很簡單，這個任務的需求是在原本代碼執行的前後印出 tag 的頭跟尾。所以使用裝飾器做得到，因為我們能夠裝飾原函數，在其被呼叫的前後打印 tag 頭尾。使用環境管理器也做得到，因為我們能夠在 <code>with</code> 區塊被執行的前後打印 tag。</p>
+<p>巢狀的 <code>with</code> 述句也可以寫成一行：</p>
+<div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">tag</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">),</span> <span class="n">tag</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">):</span>
+    <span class="n">content</span><span class="p">()</span>
+</pre></div>
+
+
+<p>順序是由左至右。這個手法其實相當實用，下次若要同時開啟很多檔案的時候，可以避免寫出階層式的巢狀：</p>
+<div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">f1</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">writer</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">f2</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">reader</span><span class="p">:</span>
+        <span class="c1"># read f2 and write to f1</span>
+</pre></div>
+
+
+<p>改成使用平面式的巢狀：</p>
+<div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">f1</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">writer</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">f2</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">reader</span><span class="p">:</span>
+    <span class="c1"># read f2 and write to f1</span>
+</pre></div>
+
+
+<h3>環境管理器小結</h3>
+<p>在這篇文章的後半部，我們認識了環境管理器的基本用法與寫法，包含了 <code>__enter__</code>、<code>__exit__</code> 和 <code>with</code>，也明白了 <code>as</code> 後面的東西就是 <code>__enter__</code> 的回傳值，<code>__exit__</code> 的參數和回傳值負責處理例外的發生。接著，我們用 <code>contextmanager</code> 搭配單一 <code>yield</code>的產生器函數簡便地實作環境管理器，同時說明了例外的處理方式，最後也了解到巢狀環境管理的使用。</p>
+<h2>結語</h2>
+<p>本篇文章從三明治的概念出發，一路介紹了裝飾器和環境管理器兩個非常具有 Python 特色的協定，我們除了分別掌握兩者的使用方法和時機之外，更要瞭解到，抽取外層（頭尾）作為復用的單元是一般副程式設計做不太到的事情，這個概念讓能讓我們的代碼更臻完美。</p>
+<blockquote>
+<p>一定有朋友會問我說，講者在最後一部分點出的使用環境管理器作為裝飾器的部分在本文沒有被提及，但這個部分的複雜度更高，礙於篇幅，只好暫且擱置，不過這個概念的出發點，大家可以參考 <code>contextlib</code> 的 source code，其中的 <code>ContextDecorator</code> 中實作了 <code>__call__</code> 使得類別的實例成為了一個裝飾器，更重要的是，該裝飾器的核心動作便是以自身為環境管理器來啟動 <code>with</code> 區塊。</p>
+</blockquote>
+<h2>參考資料</h2>
+<ul>
+<li><a href="https://drive.google.com/file/d/0Bz8Kfu_94VuJcVo1a1drQjhReU0/view">PyConTw2017 Talk Slides: Don't Reinvent Sandwich - Python Decorator and Context Manager</a></li>
+<li><a href="http://shop.oreilly.com/product/0636920032519.do">Fluent Python</a></li>
+<li><a href="https://www.python.org/dev/peps/pep-0343/">PEP 343 -- The "with" Statement</a></li>
+<li><a href="https://docs.python.org/3.6/library/contextlib.html">contextlib — Utilities for with-statement contexts</a></li>
+</ul>
+    </article>
+
+    <!--disqus-->
+        <div id="disqus_thread" class="uk-margin-large-top"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = 'http://dokelung.me/category/python/dont-reinvent-sandwich-pythons-decorator-and-context-manager/;'
+                this.page.identifier = 'category/python/dont-reinvent-sandwich-pythons-decorator-and-context-manager/;'
+            };
+            (function() {
+                var d = document, s = d.createElement('script');
+                
+                s.src = '//dokelung-me.disqus.com/embed.js';
+                
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+                    </div>
+                </div>
+                <div class="uk-width-medium-2-10">
+
+                    <!-- page view -->
+                    <div class="uk-panel uk-panel-box">
+                        <i class="uk-icon-eye"></i>
+                            <script language="Javascript">
+                            document.write('<a href="http://www.free-counter.jp/"></a>');</script><noscript>
+                            <a href="http://hqm.f-counter.com/">counter</a>
+                            <a href="http://www.free-counter.jp/">カウンター</a></noscript>
+                            <a href="http://www.free-counter.jp/"><img src="https://www.f-counter.net/j/28/1495398799/" alt="カウンター"></a>
+                    </div>
+
+                    <!-- author info -->
+                    <div class="uk-panel uk-panel-box">
+                        <div class="uk-panel-badge uk-badge"> About Me </div>
+                        <h3 class="uk-panel-title"> dokelung </h3>
+                        <img class="uk-thumbnail uk-thumbnail-small uk-align-center"
+                             src="http://dokelung.me/images/dokelung.jpg"
+                             alt="dokelung">
+                        <p>
+                            <ul class="uk-list">
+                                   <li> I am <a href="https://github.com/its-django/mysite/wiki">a book author</a></li>
+                                   <li> I am <a href="https://github.com/dokelung">a pythoner</a></li>
+                            </ul>
+                                <p> Hi, my name is Ko-Lung Yuan! </p>
+                                <p> 你好，我是袁克倫，你可以叫我 dokelung，我是一名小小軟體工程師，專長是電子設計自動化。 愛學習也愛分享，寫書來推廣熱愛的知識一直是我的夢想。 本應與 C++ 共度一生，卻意外成為 Python 的終極狂熱者，幾乎生活上的大小事都想用 Python 解決(可惜吃飯和上廁所不行)，酷愛有關於 Python 的一切。 </p>
+                        </p>
+                        <p class="uk-text-right">
+                            <a href="http://dokelung.me/pages/about-me"> More About Me... </a>
+                        </p>
+                        <hr>
+                            <h3 class="uk-panel-title"> Contacts </h3>
+                                <a href="dokelung@gmail.com"
+                                   class=" uk-icon-hover                                           uk-icon-medium
+                                          uk-align-left
+                                          uk-icon-envelope-square">
+                                </a>
+                                <a href="https://github.com/dokelung"
+                                   class=" uk-icon-hover                                           uk-icon-medium
+                                          uk-align-left
+                                          uk-icon-github-square">
+                                </a>
+                                <a href="https://www.linkedin.com/in/ko-lung-yuan-536b9aa3/"
+                                   class=" uk-icon-hover                                           uk-icon-medium
+                                          uk-align-left
+                                          uk-icon-linkedin-square">
+                                </a>
+                    </div>
+
+                    <!-- newest articles -->
+                    <div class="uk-panel uk-panel-box">
+                        <div class="uk-panel-badge uk-badge uk-badge-danger"> Newest </div>
+                        <h3 class="uk-panel-title"> Newest Articles </h3>
+                        <ul class="uk-list uk-list-space">
+                                <li><a href="http://dokelung.me/category/python/dont-reinvent-sandwich-pythons-decorator-and-context-manager/"> Don't Reinvent Sandwich - Python 的裝飾器與環境管理器 </a></li>
+                                <li><a href="http://dokelung.me/category/pelican/test/"> 測試頁 </a></li>
+                        </ul>
+                    </div>
+
+                            <div class="uk-panel uk-panel-box">
+                                    <div class="uk-panel-badge uk-badge uk-badge-danger">
+                                        book
+                                    </div>
+                                    <h3 class="uk-panel-title"> It's django </h3>
+                                    <img class="uk-thumbnail uk-thumbnail-small uk-align-center" src="http://dokelung.me/images/its_django.jpg" alt="It's django">
+                                <p> A book about python web framework Django </p>
+                                    <p class="uk-text-right"> <a href="#"> Where to buy it? </a> </p>
+                            </div>
+                            <div class="uk-panel uk-panel-box">
+                                    <div class="uk-panel-badge uk-badge uk-badge-danger">
+                                        book
+                                    </div>
+                                    <h3 class="uk-panel-title"> Python 快速入門 </h3>
+                                    <img class="uk-thumbnail uk-thumbnail-small uk-align-center" src="http://dokelung.me/images/python_quickstart.jpg" alt="Python 快速入門">
+                                <p> 適合初學者的 Python 快速入門 </p>
+                                    <p class="uk-text-right"> <a href="https://www.gitbook.com/book/dokelung/dokelung-python-quickstart/details"> Read it! </a> </p>
+                            </div>
+
+                    <!-- related links -->
+                    <div class="uk-panel uk-panel-box">
+                       <ul class="uk-nav uk-nav-parent-icon" data-uk-nav>
+                           <li class="uk-parent">
+                               <a href="#"> Related Links </a>
+                               <ul class="uk-nav-sub">
+                                       <li><a href="http://getpelican.com/" target="_blank"> Pelican </a></li>
+                                       <li><a href="http://python.org/" target="_blank"> Python.org </a></li>
+                                       <li><a href="http://jinja.pocoo.org/" target="_blank"> Jinja2 </a></li>
+                                       <li><a href="https://github.com/lucachr/pelican-mg" target="_blank"> mg </a></li>
+                               </ul>
+                           </li>
+                       </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- footer -->
+            <footer id="jojo-page-bottum" class="uk-clearfix">
+            <div class="uk-panel uk-panel-box uk-margin-large-top uk-container-center">
+                <p class="uk-text-center">
+                    © 2017 dokelung. All rights reserved. <br>
+
+                    Code snippets in the pages are released under
+                    <a href="https://opensource.org/licenses/MIT"> The MIT License </a>
+                    , unless otherwise specified. <br><br>
+
+                    Powered by <a href= "http://docs.getpelican.com/">Pelican</a>.
+                    Theme <a href="https://github.com/dokelung/jojo">jojo</a> by <a href="http://dokelung.me/">dokelung</a>
+                    powered by <a href="https://getuikit.com/v2/index.html"> uikit2 </a>
+                    inspired by <a href="https://github.com/lucachr/pelican-mg">mg</a>.
+                </p>
+            </div>
+            </footer>
+
+        </div>
+    </main>
+
+
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-56219026-2', 'auto');
+            ga('send', 'pageview');
+        </script>
+
+</body>
+</html>
