@@ -25,6 +25,10 @@ article, blockquote {
     word-break: break-all;
 }
 
+strong {
+    font-weight: 500;
+}
+
 table {
     font-size: 14px;
     font-weight: 300;
