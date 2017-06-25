@@ -181,6 +181,9 @@
 <p>另外，本文的許多例子和想法都來自 <a href="http://shop.oreilly.com/product/0636920032519.do">Fluent Python</a> 這本書，這是我迄今看過最好的 Python 書籍了。</p>
 </blockquote>
 <p>由於本文相當長，為了閱讀上的方便我將它分成前後兩篇，分別著重在 Python 的裝飾器和環境管理器，這是本文的上半部分，我們會討論 Python 的裝飾器。</p>
+<ul>
+<li>延伸閱讀：<a href="http://dokelung.me/category/python/dont-reinvent-sandwich-2">Don't Reinvent Sandwich 2: Context Manager</a></li>
+</ul>
 <hr />
 <h2>從檔案的開關談起</h2>
 <p>Python 的檔案操作一直都是很平易近人的，使用內建的 <code>open</code> 函數來開啟檔案並且獲得回傳的 <strong>檔案物件 (file object)</strong>，最後透過檔案物件的 <code>close</code> 方法關閉檔案，大概像是這樣子：</p>
