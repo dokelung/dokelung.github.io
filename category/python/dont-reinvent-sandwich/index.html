@@ -174,7 +174,7 @@
 <p>該演講的 <a href="https://drive.google.com/file/d/0Bz8Kfu_94VuJcVo1a1drQjhReU0/view">投影片</a> 和講者的 <a href="https://www.facebook.com/syhsiao0917?ref=ts&amp;fref=ts">Facebook</a>。</p>
 </blockquote>
 <p>由於我對於語言本身的設計和使用慣例非常感興趣，所以就去朝聖了一下。講題的主旨大略是：我們通常透過抽取一段重複出現的 <strong>連續代碼</strong> 成為 <strong>函數 (function)</strong> 或 <strong>類別 (class)</strong> 來重複利用他，避免重複發明輪子。但有的時候想要抽取的部分並非 <strong>中間</strong> (
-三明治的麵包）連續的部分，而是 <strong>頭尾</strong> （三明治的麵包），這個時候我們便需要使用一些其他的手法或機制來達到 reuse 的目的了。Python 正好非常友善地提供了 <strong>裝飾器 (decorator)</strong> 和 <strong>環境管理器 (context manager)</strong>，可以很容易地達成我們的目的。</p>
+三明治的餡）連續的部分，而是 <strong>頭尾</strong> （三明治的麵包），這個時候我們便需要使用一些其他的手法或機制來達到 reuse 的目的了。Python 正好非常友善地提供了 <strong>裝飾器 (decorator)</strong> 和 <strong>環境管理器 (context manager)</strong>，可以很容易地達成我們的目的。</p>
 <p>這場演講給出了非常有意思的想法，尤其是裝飾器與環境管理器的互通。但很可惜的是，雖然 Python 的 decorator 和 context manager 非常有自己的特色也是許多大型專案常用的技術，但是對於初學者而言還是一個相對進階的主題，我認為初學者並不容易在這短短的四十五分鐘內了解全部的內容，所以寫了這篇文章，希望能詳細地頗析本場演講所涵蓋到的內容，期待能對大家有所幫助，不過所學慎淺，班門弄斧不免貽笑大方，那就還請講者及各路高手海涵。</p>
 <p>本文的脈絡大致會依循講者的投影片，內容的部分也是，會有適度的補充，就容我多撈叨一兩句，而較零碎的細節就容我略過不提了。</p>
 <blockquote>
@@ -291,7 +291,7 @@
 
 
 <p>而通常這個修飾過的函數也會被賦值給原本的函數變數，意思是我們通常不會為修飾過的函數另取名稱，而會沿用原來的名字：</p>
-<div class="highlight"><pre><span></span><span class="c1"># 通常不會為修飾過的函數另娶名稱</span>
+<div class="highlight"><pre><span></span><span class="c1"># 通常不會為修飾過的函數另取名稱</span>
 <span class="n">clock_snooze</span> <span class="o">=</span> <span class="n">clock</span><span class="p">(</span><span class="n">snooze</span><span class="p">)</span>
 <span class="n">clock_sum_of_square</span> <span class="o">=</span> <span class="n">clock</span><span class="p">(</span><span class="n">sum_of_square</span><span class="p">)</span>
 
@@ -476,7 +476,7 @@ content line
 <p>但卻沒辦法寫成 <code>@</code> 的形式，原因是 <code>@</code> 後面跟著的裝飾器函數必須是個單參數函數。</p>
 <p>要解決這個問題，我們可以製造另一個函數，此函數會回傳真正的裝飾器：</p>
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tag</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
-    <span class="c1"># 這個才是真正的裝飾器，為了把 tag 讓給更上一層的函數，這裡我們使用 `deco` 這個名字</span>
+    <span class="c1"># 這個才是真正的裝飾器，為了把 tag 讓給更上一層的函數，這裡我們使用 deco 這個名字</span>
     <span class="k">def</span> <span class="nf">deco</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
         <span class="nd">@wraps</span>
         <span class="k">def</span> <span class="nf">new_func</span><span class="p">():</span>
@@ -484,7 +484,7 @@ content line
             <span class="n">func</span><span class="p">()</span>
             <span class="k">print</span><span class="p">(</span><span class="s1">&#39;&lt;/{}&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
         <span class="k">return</span> <span class="n">new_func</span>
-     <span class="k">return</span> <span class="n">tag</span>
+    <span class="k">return</span> <span class="n">deco</span>
 </pre></div>
 
 
