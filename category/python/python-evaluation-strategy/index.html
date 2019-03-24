@@ -99,7 +99,7 @@
                     <li><a href="http://dokelung.me"> home </a></li>
     <li><a href="http://dokelung.me/categories.html"> category </a></li>
     <li><a href="http://dokelung.me/category/python.html"> python </a></li>
-    <li class="uk-active"><span> Python 到底是 call by value 還是 call by reference? 一次搞懂程式語言的函式傳參! </span></li>
+    <li class="uk-active"><span> Python 到底是 pass by value 還是 pass by reference? 一次搞懂程式語言的函式傳參! </span></li>
                 </ul>
             </div>
 
@@ -114,7 +114,7 @@
                 </a>
             </li>
             <li>
-                <a href="https://twitter.com/intent/tweet?text=Python%20%E5%88%B0%E5%BA%95%E6%98%AF%20call%20by%20value%20%E9%82%84%E6%98%AF%20call%20by%20reference%3F%20%E4%B8%80%E6%AC%A1%E6%90%9E%E6%87%82%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80%E7%9A%84%E5%87%BD%E5%BC%8F%E5%82%B3%E5%8F%83%21&url=http://dokelung.me/category/python/python-evaluation-strategy/&via=" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="uk-button" target="_blank">
+                <a href="https://twitter.com/intent/tweet?text=Python%20%E5%88%B0%E5%BA%95%E6%98%AF%20pass%20by%20value%20%E9%82%84%E6%98%AF%20pass%20by%20reference%3F%20%E4%B8%80%E6%AC%A1%E6%90%9E%E6%87%82%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80%E7%9A%84%E5%87%BD%E5%BC%8F%E5%82%B3%E5%8F%83%21&url=http://dokelung.me/category/python/python-evaluation-strategy/&via=" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="uk-button" target="_blank">
                     <i class="uk-icon-twitter"></i> Share
                 </a>
             </li>
@@ -148,7 +148,7 @@
     <article class="uk-article">
 
         <h1 class="uk-article-title">
-           <a href="http://dokelung.me/category/python/python-evaluation-strategy/" rel="bookmark"> Python 到底是 call by value 還是 call by reference? 一次搞懂程式語言的函式傳參! </a>
+           <a href="http://dokelung.me/category/python/python-evaluation-strategy/" rel="bookmark"> Python 到底是 pass by value 還是 pass by reference? 一次搞懂程式語言的函式傳參! </a>
         </h1>
 
             <div class="tags">
@@ -211,8 +211,8 @@
 <p>這個問題可能只是一個新手會迷惘的問題，但值得討論的地方頗多。
 我發現在回答這個問題時，網友們對於 Python 使用的傳參機制有相當多的誤解，包括：</p>
 <ol>
-<li>認為 Python 是 call by value 或是 call by reference (你也這樣想嗎？那我建議你看下去！)</li>
-<li>認為 Python 會根據所傳入物件是可變還是不可變的去選擇使用 call by value 和 call by reference (這下扯更遠了)</li>
+<li>認為 Python 是 pass by value 或是 pass by reference (你也這樣想嗎？那我建議你看下去！)</li>
+<li>認為 Python 會根據所傳入物件是可變還是不可變的去選擇使用 pass by value 和 pass by reference (這下扯更遠了)</li>
 <li>想要使用 built-in function <code>id</code> 來做佐證，但沒有搞清楚 <code>id</code> 問的是誰的 id</li>
 </ol>
 <p>若你想知道這一切問題的答案，就讓我們耐心慢慢看下去...</p>
@@ -220,8 +220,8 @@
 <h2>(1) 從 variable 跟 value 談起</h2>
 <p>這是一個很重要的概念, <strong>variable</strong> 與其 <strong>儲存(參考)的 value (object)</strong> 是兩個完全不同的東西:</p>
 <blockquote>
-<p>variable 是一個抽象的概念，value 是一個實際存在的資料
-variable 不是其對應的 value，vairable 儲存(參考)其對應的 value</p>
+<p>variable 是一個抽象的概念，value 是一個實際存在的資料</p>
+<p>variable 不是其對應的 value，vairable 儲存(參考)其對應的 value</p>
 </blockquote>
 <p>舉個例子:</p>
 <div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
@@ -461,8 +461,35 @@ variable 不是其對應的 value，vairable 儲存(參考)其對應的 value</p
 <p>你會發現 <code>times</code> 跟 <code>t begin</code> 一樣, <strong>值沒有被複製</strong>, 至於 <code>t</code> 為何最後變了, 
 那是因為 <code>times += 1</code> 讓 <code>times</code> 指到別人了。</p>
 <h2>(6) 結論</h2>
-<p>所以, 別再說 python 是 pass by value 或是 pass by reference 了, 都不是!!
-python 是完完全全的 call by sharing!</p>
+<p>先用表格幫大家總結一下三種常見的傳參方式：</p>
+<table>
+<thead>
+<tr>
+<th>傳參方式</th>
+<th>想像</th>
+<th>對 variable assignment 和 data manipulating 的影響</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pass by value</td>
+<td>在被呼叫的函數中製造一個新的 box, 並將 caller box 中的內容 copy 一份存到新的 box 中</td>
+<td>不論在 function 中進行 variable assignment 或是 data manipulating 都不會影響外界</td>
+</tr>
+<tr>
+<td>pass by reference</td>
+<td>將 caller box 和其中的內容直接傳遞到 function</td>
+<td>不論在 function 中進行 variable assignment 或是 data manipulating 都會影響外界</td>
+</tr>
+<tr>
+<td>pass by sharing</td>
+<td>在被呼叫的函數中製造一個新的 box, 但不複製 caller box 中的內容, 而是裝載同一份內容</td>
+<td>在 function 中進行 variable assignment 的時候不會影響外界, 但是作 data manipulating 會影響外界</td>
+</tr>
+</tbody>
+</table>
+<p>最後我們來對 Python 的傳值方式下個結論：別再說 python 是 pass by value 或是 pass by reference 了, 
+都不是!! python 是完完全全的 call by sharing!</p>
 <h2>(7) 參考資料</h2>
 <ul>
 <li><a href="https://stackoverflow.com/questions/13299427/python-functions-call-by-reference">python-functions-call-by-reference</a></li>
@@ -546,7 +573,7 @@ python 是完完全全的 call by sharing!</p>
                         <div class="uk-panel-badge uk-badge uk-badge-danger"> Newest </div>
                         <h3 class="uk-panel-title"> Newest Articles </h3>
                         <ul class="uk-list uk-list-space">
-                                <li><a href="http://dokelung.me/category/python/python-evaluation-strategy/"> Python 到底是 call by value 還是 call by reference? 一次搞懂程式語言的函式傳參! </a></li>
+                                <li><a href="http://dokelung.me/category/python/python-evaluation-strategy/"> Python 到底是 pass by value 還是 pass by reference? 一次搞懂程式語言的函式傳參! </a></li>
                                 <li><a href="http://dokelung.me/category/python/pythonic-tip-1/"> 小小步邁向 Pythonic (1) - 利用長字串分割以製造字串清單 </a></li>
                                 <li><a href="http://dokelung.me/category/python/dont-reinvent-sandwich-2/"> Don't Reinvent Sandwich 2: Context Manager </a></li>
                                 <li><a href="http://dokelung.me/category/python/dont-reinvent-sandwich/"> Don't Reinvent Sandwich: Decorator </a></li>
