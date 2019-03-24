@@ -462,32 +462,34 @@
 那是因為 <code>times += 1</code> 讓 <code>times</code> 指到別人了。</p>
 <h2>(6) 結論</h2>
 <p>先用表格幫大家總結一下三種常見的傳參方式：</p>
-<table>
-<thead>
-<tr>
-<th>傳參方式</th>
-<th>想像</th>
-<th>對 variable assignment 和 data manipulating 的影響</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>pass by value</td>
-<td>在被呼叫的函數中製造一個新的 box, 並將 caller box 中的內容 copy 一份存到新的 box 中</td>
-<td>不論在 function 中進行 variable assignment 或是 data manipulating 都不會影響外界</td>
-</tr>
-<tr>
-<td>pass by reference</td>
-<td>將 caller box 和其中的內容直接傳遞到 function</td>
-<td>不論在 function 中進行 variable assignment 或是 data manipulating 都會影響外界</td>
-</tr>
-<tr>
-<td>pass by sharing</td>
-<td>在被呼叫的函數中製造一個新的 box, 但不複製 caller box 中的內容, 而是裝載同一份內容</td>
-<td>在 function 中進行 variable assignment 的時候不會影響外界, 但是作 data manipulating 會影響外界</td>
-</tr>
-</tbody>
+<table class="uk-table uk-table-striped">
+    <caption> 三種常見的傳參方式 </caption>
+    <thead>
+    <tr>
+        <th> 傳參方式 </th>
+        <th> 想像 </th>
+        <th> 對 variable assignment 和 data manipulating 的影響 </th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> pass by value </td>
+            <td> 被呼叫的函數中製造一個新的 box, 並將 caller box 中的內容 copy 一份存到新的 box 中 </td>
+            <td> 不論在 function 中進行 variable assignment 或是 data manipulating 都不會影響外界 </td>
+        </tr>
+        <tr>
+            <td> pass by reference </td>
+            <td> 將 caller box 和其中的內容直接傳遞到 function </td>
+            <td> 不論在 function 中進行 variable assignment 或是 data manipulating 都會影響外界 </td>
+        </tr>
+        <tr>
+            <td> pass by sharing </td>
+            <td> 在被呼叫的函數中製造一個新的 box, 但不複製 caller box 中的內容, 而是裝載同一份內容 </td>
+            <td> function 中進行 variable assignment 的時候不會影響外界, 但是作 data manipulating 會影響外界 </td>
+        </tr>
+    </tbody>
 </table>
+
 <p>最後我們來對 Python 的傳值方式下個結論：別再說 python 是 pass by value 或是 pass by reference 了, 
 都不是!! python 是完完全全的 call by sharing!</p>
 <h2>(7) 參考資料</h2>
