@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> dokelung.me </title>
+    <link rel="shortcut icon" href="http://dokelung.me/images/dokelung.jpeg" />
+
+    <script src="http://dokelung.me/theme/js/jquery-3.1.1.min.js"></script>
+
+    <!-- extra css -->
+
+    <!-- uikit basic -->
+    <link rel="stylesheet" href="http://dokelung.me/theme/css/uikit.min.css"/>
+    <script src="http://dokelung.me/theme/js/uikit.min.js"></script>
+
+    <!-- uk components -->
+    <link rel="stylesheet" href="http://dokelung.me/theme/css/components/sticky.css"/>
+    <script src="http://dokelung.me/theme/js/components/sticky.js"></script>
+    <link rel="stylesheet" href="http://dokelung.me/theme/css/components/search.css"/>
+    <script src="http://dokelung.me/theme/js/components/search.js"></script>
+
+    <!-- self defined  -->
+    <link rel="stylesheet" href="http://dokelung.me/theme/css/highlight.css"/>
+    <link rel="stylesheet" href="http://dokelung.me/theme/css/main.css"/>
+
+</head>
+<body>
+
+    <main class="jojo-theme">
+        <div class="uk-container uk-container-center">
+
+            <!-- nav -->
+            <nav id="jojo-page-top" class="uk-navbar jojo-main-nav">
+                <a href="http://dokelung.me" class="uk-navbar-brand"> dokelung.me </a>
+
+                <ul class="uk-navbar-nav">
+                        <li >
+                            <a href="http://dokelung.me/pages/about-me"> About me </a>
+                        </li>
+                        <li class="uk-parent" data-uk-dropdown>
+                            <a href="#"> Materials </a>
+                                <div class="uk-dropdown uk-dropdown-navbar">
+                                    <ul class="uk-nav uk-nav-navbar">
+                                            <li class="uk-nav-header">
+                                                    Publications
+                                            </li>
+                                            <li >
+                                                    <a href="http://dokelung.me/pages/books"> Books </a>
+                                            </li>
+                                            <li >
+                                                    <a href="http://dokelung.me/pages/papers"> Papers </a>
+                                            </li>
+                                            <li class="uk-nav-divider">
+                                            </li>
+                                            <li >
+                                                    <a href="http://dokelung.me/pages/presentations"> Presentations </a>
+                                            </li>
+                                    </ul>
+                                </div>
+                        </li>
+                        <li >
+                            <a href="http://dokelung.me/pages/projects"> Projects </a>
+                        </li>
+                        <li class="uk-parent" data-uk-dropdown>
+                            <a href="http://dokelung.me/categories.html"> Category </a>
+                                <div class="uk-dropdown uk-dropdown-navbar">
+                                    <ul class="uk-nav uk-nav-navbar">
+                                            <li class="uk-nav-header">
+                                                    Programming
+                                            </li>
+                                            <li >
+                                                    <a href="http://dokelung.me/category/python.html"> python </a>
+                                            </li>
+                                            <li class="uk-nav-divider">
+                                            </li>
+                                            <li >
+                                                    <a href="http://dokelung.me/category/pelican.html"> pelican </a>
+                                            </li>
+                                    </ul>
+                                </div>
+                        </li>
+                        <li >
+                            <a href="http://dokelung.me/archives.html"> Archives </a>
+                        </li>
+                </ul>
+
+                <div class="uk-navbar-flip">
+                    <div class="uk-navbar-content">
+                        <form class="uk-search" data-uk-search="{source:'my-results.json'}" action="http://dokelung.me/search.html">
+                            <input id="tipue_search_input" class="uk-search-field" type="search" name="q" autocomplete="off" required placeholder="Search...">
+                        </form>
+                    </div>
+                </div>
+
+            </nav>
+
+            <div class="uk-panel uk-panel-box uk-panel-box-secondary uk-panel-hover" id="jojo-location-panel">
+                <ul class="uk-breadcrumb">
+                    <li><a href="#" class="uk-icon-map-marker"></a></li>
+                    <li><a href="http://dokelung.me"> home </a></li>
+    <li><a href="http://dokelung.me/categories.html"> category </a></li>
+    <li><a href="http://dokelung.me/category/python.html"> python </a></li>
+    <li class="uk-active"><span> Python 到底是 call by value 還是 call by reference? 一次搞懂程式語言的函式傳參! </span></li>
+                </ul>
+            </div>
+
+            <div class="uk-grid uk-margin-large-top">
+                <div class="uk-width-medium-1-10">
+
+    <div class="uk-panel jojo-share" data-uk-sticky>
+        <ul class="uk-nav uk-nav-side">
+            <li>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=http://dokelung.me/category/python/python-evaluation-strategy/" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" taget="_blank" class="uk-button">
+                    <i class="uk-icon-facebook-square"></i> Share
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/intent/tweet?text=Python%20%E5%88%B0%E5%BA%95%E6%98%AF%20call%20by%20value%20%E9%82%84%E6%98%AF%20call%20by%20reference%3F%20%E4%B8%80%E6%AC%A1%E6%90%9E%E6%87%82%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80%E7%9A%84%E5%87%BD%E5%BC%8F%E5%82%B3%E5%8F%83%21&url=http://dokelung.me/category/python/python-evaluation-strategy/&via=" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="uk-button" target="_blank">
+                    <i class="uk-icon-twitter"></i> Share
+                </a>
+            </li>
+            <li>
+                <a href="https://plus.google.com/share?url=http://dokelung.me/category/python/python-evaluation-strategy/" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" target="_blank" class="uk-button">
+                    <i class="uk-icon-google-plus-square"></i> Share
+                </a>
+            </li>
+        </ul>
+    </div>
+
+                    <div class="uk-panel jojo-share" data-uk-sticky="{top:300}">
+                        <ul class="uk-nav uk-nav-side">
+                            <li>
+                                <a href="#jojo-page-top" class="uk-button" data-uk-smooth-scroll>
+                                    <i class="uk-icon-chevron-up"></i> Top
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#jojo-page-bottum" class="uk-button" data-uk-smooth-scroll>
+                                    <i class="uk-icon-chevron-down"></i> Bot
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="uk-width-medium-7-10">
+                    <div class="uk-margin-top">
+                        <!-- content -->
+    <article class="uk-article">
+
+        <h1 class="uk-article-title">
+           <a href="http://dokelung.me/category/python/python-evaluation-strategy/" rel="bookmark"> Python 到底是 call by value 還是 call by reference? 一次搞懂程式語言的函式傳參! </a>
+        </h1>
+
+            <div class="tags">
+                <i class="uk-icon-tags"></i>
+                    <div class="uk-badge uk-badge-notification">
+                        <a href="http://dokelung.me/tag/python.html">python</a>
+                    </div>
+            </div>
+
+        <!-- meta -->
+        <p class="uk-article-meta">
+            日 24 3月 2019
+        </p>
+
+        <hr class="uk-article-divider">
+
+        <div class="uk-thumbnail uk-thumbnail-medium">
+    <img src="http://dokelung.me/category/python/python-evaluation-strategy/images/python-topic.png" alt="python-topic.png">
+</div>
+
+<p>近日在思考 C++ 的指標問題時，意外翻到去年我在 SegmentFault 上給網友的一篇回答，裡面詳細地討論了關於函數傳參的問題，覺得應該有不少參考價值，看完應該能夠對介紹的傳參方式有一點領悟，故整理於此，希望能對大家有所幫助。 </p>
+<hr />
+<h2>原本的問題</h2>
+<p>該網友有一段程式碼如下:</p>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Count</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">count</span> <span class="o">=</span> <span class="n">count</span>
+
+
+<span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">times</span><span class="p">):</span>
+    <span class="n">c</span><span class="o">.</span><span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;c:&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">count</span><span class="p">)</span>
+    <span class="n">times</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;t:&#39;</span><span class="p">,</span> <span class="n">times</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">Count</span><span class="p">()</span>
+    <span class="n">times</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+        <span class="n">increment</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">times</span><span class="p">)</span>
+
+<span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+
+<p>其執行結果為:</p>
+<div class="highlight"><pre><span></span><span class="n">c</span><span class="o">:</span> <span class="mi">97</span>
+<span class="n">t</span><span class="o">:</span> <span class="mi">1</span>
+<span class="n">c</span><span class="o">:</span> <span class="mi">98</span>
+<span class="n">t</span><span class="o">:</span> <span class="mi">1</span>
+<span class="n">c</span><span class="o">:</span> <span class="mi">99</span>
+<span class="n">t</span><span class="o">:</span> <span class="mi">1</span>
+<span class="n">c</span><span class="o">:</span> <span class="mi">100</span>
+<span class="n">t</span><span class="o">:</span> <span class="mi">1</span>
+</pre></div>
+
+
+<p>他不明白為何在 <code>main</code> 的 <code>for</code> 迴圈中，<code>t</code> 的值不會變化。</p>
+<p>這個問題可能只是一個新手會迷惘的問題，但值得討論的地方頗多。 讓我們慢慢看下去...</p>
+<hr />
+<h2>(1) 從 variable 跟 value 談起</h2>
+<p>這是一個很重要的概念, <strong>variable</strong> 與其 <strong>儲存(參考)的 value (object)</strong> 是兩個完全不同的東西:</p>
+<blockquote>
+<p>variable 是一個抽象的概念
+value 是一個實際存在的資料</p>
+<p>variable 不是其對應的 value
+vairable 儲存(參考)其對應的 value</p>
+</blockquote>
+<p>舉了例子:</p>
+<div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+</pre></div>
+
+
+<p>我們說 <code>a</code> 是一個 variable, 他參考到 <code>5</code> 這個整數, <code>a</code> 不是 <code>5</code>, <code>5</code> 不是 <code>a</code>, 那究竟 variable <code>a</code> 是什麼呢?</p>
+<p>我們可以把他想成一個 box (在 c/c++ 中這樣的想像比較妥當), 他 <strong>儲存</strong> 著 value，又或者我們可以把他想像成一個標籤(在 python 中可以這樣想像), 他 <strong>參考</strong> 到對應的 value。</p>
+<blockquote>
+<p>variable 跟 value 是兩回事, 但他們有 <strong>指涉關係</strong></p>
+</blockquote>
+<h2>(2) 關於 buildin function <code>id</code></h2>
+<p><code>id</code> 常常會有直覺上的誤解, 因為我們常常會使用 variable 作為 <code>id</code> 的 argument:</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">140035495798656</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">140035495798688</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="mi">140035495798656</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="mi">140035495798688</span>
+</pre></div>
+
+
+<p>但從上面的例子可以看出來, 當我們使用 <code>id(a)</code> 的時候, 我們詢問的不是 <code>a</code> 的 id, 而是 <code>a</code> 對應到的 value <code>5</code> 的 id, 這也是為什麼當 <code>a = 6</code> 的 assign 發生之後, <code>id(a)</code> 的結果不同了。</p>
+<blockquote>
+<p><code>id</code> 問的是 <strong>value</strong> 的 id 不是 <strong>variable</strong> 的 id</p>
+</blockquote>
+<h2>(3) variable assignment 與 data manipulating</h2>
+<p>(3) 這個標題中提到兩種不同的動作(這是我自己亂叫的, 並非專有名詞, 慎之):</p>
+<p><strong>variable assignment</strong> 指的是變數的指派跟重新繫結:</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">140035460871496</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">140035460871560</span>
+</pre></div>
+
+
+<p>上面我們讓 <code>a</code> 這個 variable 指涉到另外一個 list, 原本的 empty list 並沒有被動到, <code>a</code> 對應的內容之所以改變, 是因為我們讓他參考到了別的 data。</p>
+<p><strong>data manipulating</strong> 指的是 data 本身進行了一些操作, 例如:</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">140035460871496</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">140035460871496</span>
+</pre></div>
+
+
+<p>這種操作會使得 value(data) 的內容被改變, 但是 variable 還是指涉到同一個 data。</p>
+<p>P.S. 關於這兩種概念的討論和注意事項請見 <strong>評論</strong> 處我與 @chaneyzorn[chaneyzorn]  的討論。</p>
+<h2>(4) 函數調用時的傳遞方式</h2>
+<p>其實整個 function call 的 pass way 只是 <a href="https://zh.wikipedia.org/wiki/%E6%B1%82%E5%80%BC%E7%AD%96%E7%95%A5">求值策略 Evaluation strateg</a> 的一部分, 但我們今天重點就放在 function call 上面。</p>
+<p>最常見的傳遞方式有三種:</p>
+<ol>
+<li>pass by value</li>
+<li>pass by reference</li>
+<li>pass by sharing (call by object reference)</li>
+</ol>
+<p>我們一種一種來分析:</p>
+<h3>pass by value</h3>
+<p>此種傳遞方式會在函數內另起一個新的 variable, 並將 caller 傳入的 argument value 複製一份傳入, 此新 variable 將會指涉到這個複製的 value, 這個行為牽涉到兩個不同的 variable, 而行為上是傳遞 value 本身, 所以叫做 pass by value。</p>
+<blockquote>
+<p>想像: 在被呼叫的函數中製造一個新的 box, 並將 caller box 中的內容 copy 一份存到新的 box 中</p>
+</blockquote>
+<p>舉個 c++ 的例子:</p>
+<div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">foo</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+    <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">foo</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>此處, <code>main</code> 中的 <code>a</code> 和 <code>foo</code> 中的 <code>a</code> 是兩個完全不同的 variable, 所以當我們進行 variable assignment (<code>a = b</code>) 的時候, 外面的 <code>a</code> 完全不會受到影響。同樣地, 因為 value 也是複製的, 如果我們進行 data manipulating 也完全不會影響到函數以外的世界。</p>
+<blockquote>
+<p>對兩種操作的影響: 不論在 function 中進行 variable assignment 或是 data manipulating 都不會影響外界。</p>
+</blockquote>
+<h3>pass by reference</h3>
+<p>此種傳遞方式並不一定會在函數內另起一個新 variable (要看語言), 但是 caller
+中的 argument value 一定不會被複製。這種傳遞方式通常是被 <strong>特殊的語法</strong> 或是 <strong>模擬方法</strong> 所實現。</p>
+<p>比如說, 在 c++ 中, 預設的傳遞方法是 call by value, 但他提供了特殊的參照語法讓我們得以實現 pass by referece, 讓我們看一個例子:</p>
+<div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">foo</span><span class="p">(</span><span class="kt">int</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+    <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">foo</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>在這個例子中, <code>foo</code> 中的 <code>a</code> 與 <code>main</code> 中的 <code>a</code> 是同一個 variable, 如果這邊是一個 object 而不是整數, 我們也能看見這個 <code>a</code> 指涉到一樣的 value (這是當然的, 因為這邊根本就只有一個 variable <code>a</code>)。</p>
+<p>另外像是 c, 預設的傳遞方法也是 call by value, 我們得利用指標來模擬 pass by referece, 見下例 (出自 wiki):</p>
+<div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">modify</span><span class="p">(</span><span class="kt">int</span> <span class="n">p</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span> <span class="n">q</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="mi">27</span><span class="p">;</span>  <span class="c1">// passed by value: only the local parameter is modified</span>
+    <span class="o">*</span><span class="n">q</span> <span class="o">=</span> <span class="mi">27</span><span class="p">;</span> <span class="c1">// passed by value or reference, check call site to determine which</span>
+    <span class="o">*</span><span class="n">r</span> <span class="o">=</span> <span class="mi">27</span><span class="p">;</span> <span class="c1">// passed by value or reference, check call site to determine which</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="kt">int</span><span class="o">*</span> <span class="n">c</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">;</span>
+
+    <span class="c1">// a is passed by value</span>
+    <span class="c1">// b is passed by reference by creating a pointer</span>
+    <span class="c1">// c is a pointer passed by value</span>
+    <span class="c1">// b and x are changed</span>
+    <span class="n">modify</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">);</span> 
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>這個例子展示了 c 中完整的 pass 方法, <code>a</code> 是個整數, 使用 call by value 的方式傳遞, <code>p</code> 是一個全新的 variable, 於是我們對此 variable 重新指派不影響外面的 <code>a</code> 指涉的值。<code>b</code> 的傳遞透過指標來進行，此處的　<code>q</code> 雖然是全新的 variable, 但是 <code>*q</code> 卻是指涉到原本的值且對 <code>*q</code> 的重指派等若對於 <code>b</code> 的重指派, 若此處 <code>b</code> 為一個 object, 我們在 <code>modify</code> 中對 <code>*q</code> 指涉到的 object 作 data manipulating 一樣會影響到外面 <code>b</code> 指涉到的 object (因為他們是同一個)。<code>x</code> 跟 <code>c</code> 的部分就請大家自行參考, 不再多言。</p>
+<p>這種藉由 pointer (address) 來模擬 pass by reference 的方法也被稱為 <strong>pass by address</strong>。</p>
+<blockquote>
+<p>想像: 將 caller box 和其中的內容直接傳遞到 function </p>
+<p>對兩種操作的影響: 不論在 function 中進行 variable assignment 或是 data manipulating 都會影響外界。</p>
+</blockquote>
+<h3>pass by sharing</h3>
+<p>有人把這種傳遞方式稱作 <strong>pass by object reference</strong>, 但在 wiki 中是被叫做 <strong>call by sharing</strong>, 此方式由 <a href="http://www.lcs.mit.edu/publications/pubs/pdf/MIT-LCS-TR-225.pdf">Barbara Liskov</a> 命名 ，並被 Python、Java(物件類型)、JavaScript、Scheme、OCaml 等語言使用。</p>
+<p>此方式會在函數中製造一個新的 variable, 但是傳入的 value 卻不會複製, 而是讓裡面的新 variable 指涉到一樣的 value (data)。</p>
+<blockquote>
+<p>想像: 在被呼叫的函數中製造一個新的 box, 但不複製 caller box 中的內容, 而是裝載同一份內容 </p>
+</blockquote>
+<p>請看以下例子:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+    <span class="n">lst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">foo</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</pre></div>
+
+
+<p>你覺得 <code>print(m)</code> 的結果是什麼呢? 答案是 <code>[1]</code>, 原因很簡單, <code>foo</code> 中的 <code>lst</code> 一開始指涉到外面傳入的 empty list, 所以當我們 <code>lst.appedn(1)</code> 時, <code>lst</code> 參考到的 list 跟外面的 <code>m</code> 參考到的 list 都被更動為 <code>[1]</code>, 但 <code>lst = [2]</code> 卻不會影響外界, 因為 <code>lst</code> 和 <code>m</code> 是兩個不同的 variable, 我們只是將 <code>lst</code> 重新指派到一個新的 list 而已。</p>
+<blockquote>
+<p>對兩種操作的影響: 在 function 中進行 variable assignment 的時候不會影響外界, 但是作 data manipulating 會影響外界。</p>
+</blockquote>
+<h2>(5) 回頭看本題</h2>
+<p>所以 python 並不會因為 data 是可變還是不可變的因素去決定是傳值還是傳參, 因為他都不是, 他自有其特殊的傳遞方式:</p>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Count</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">count</span> <span class="o">=</span> <span class="n">count</span>
+
+<span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">times</span><span class="p">):</span>
+    <span class="n">c</span><span class="o">.</span><span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="c1"># print(&#39;c:&#39;, c.count)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;c:&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">c</span><span class="p">))</span>
+    <span class="n">times</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="c1"># print(&#39;t:&#39;, times)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;t:&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">times</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">Count</span><span class="p">()</span>
+    <span class="n">times</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;times:&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">times</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+        <span class="n">increment</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">times</span><span class="p">)</span>
+</pre></div>
+
+
+<p>之所以 <code>c.count</code> 改變而 <code>times</code> 不變, 並非因為 <code>c</code> 是傳參, <code>times</code> 傳值, 而是對於 pass by sharing 來說, <strong>以 argument <code>c</code> 的角度而言</strong>, <code>c.count += 1</code> 是一個 data manipulating 的動作, 我們操作了與外界同一份 data 所以影響了外面的 <code>c</code>, 而 <code>times += 1</code> <strong>以 argument <code>times</code> 的角度而言</strong> 是一個 variable assignment 的動作, 我們操作了與外界不同一個的 variable, 所以不會影響外面。</p>
+<p>我們來看一下上面的實驗， 在外面的 <code>id(times)</code> 問的是 <code>0</code> 的 id, 而在 <code>increment</code> 中問的都是 <code>1</code> 的 id, 所以才會第一個 <code>id(times)</code> 與剩下來的 <code>id(times)</code> 不同, 但剩下來的 <code>id(times)</code> 皆相同。卻不是因為外面的 <code>times</code> 跟裡面的 <code>times</code> 是不一樣的 variable 所以才會這樣的, 這裡的 <code>times</code> 沒有傳值, 而是共享值。</p>
+<p>要怎麼突破這個盲點呢? 可以加上一行來測試:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">times</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;t begin:&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">times</span><span class="p">))</span>
+    <span class="n">c</span><span class="o">.</span><span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="o">...</span>
+</pre></div>
+
+
+<p>結果:</p>
+<div class="highlight"><pre><span></span><span class="n">times</span><span class="p">:</span> <span class="mi">140303106782944</span>
+<span class="n">t</span> <span class="n">begin</span><span class="p">:</span> <span class="mi">140303106782944</span>
+<span class="n">c</span><span class="p">:</span> <span class="mi">140303062368832</span>
+<span class="n">t</span><span class="p">:</span> <span class="mi">140303106782976</span>
+<span class="n">t</span> <span class="n">begin</span><span class="p">:</span> <span class="mi">140303106782944</span>
+<span class="n">c</span><span class="p">:</span> <span class="mi">140303062368832</span>
+<span class="n">t</span><span class="p">:</span> <span class="mi">140303106782976</span>
+<span class="n">t</span> <span class="n">begin</span><span class="p">:</span> <span class="mi">140303106782944</span>
+<span class="n">c</span><span class="p">:</span> <span class="mi">140303062368832</span>
+<span class="n">t</span><span class="p">:</span> <span class="mi">140303106782976</span>
+<span class="n">t</span> <span class="n">begin</span><span class="p">:</span> <span class="mi">140303106782944</span>
+</pre></div>
+
+
+<p>你會發現 <code>times</code> 跟 <code>t begin</code> 一樣, <strong>值沒有被複製</strong>, 至於 <code>t</code> 為何最後變了, 那是因為 <code>times += 1</code> 讓 <code>times</code> 指到別人了。</p>
+<h2>(6) 結論</h2>
+<p>所以, 別再說 python 是 pass by value 或是 pass by reference 了, 都不是!!
+python 是完完全全的 call by sharing!</p>
+<h2>(7) 參考資料</h2>
+<ul>
+<li><a href="https://stackoverflow.com/questions/13299427/python-functions-call-by-reference">python-functions-call-by-reference</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E6%B1%82%E5%80%BC%E7%AD%96%E7%95%A5">求值策略 Evaluation strateg</a></li>
+</ul>
+<hr />
+<p><strong>我回答過的問題</strong>: <a href="https://github.com/dokelung/Python-QA">Python-QA</a></p>
+    </article>
+
+    <!--disqus-->
+        <div id="disqus_thread" class="uk-margin-large-top"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = 'http://dokelung.me/category/python/python-evaluation-strategy/;'
+                this.page.identifier = 'category/python/python-evaluation-strategy/;'
+            };
+            (function() {
+                var d = document, s = d.createElement('script');
+                
+                s.src = '//dokelung-me.disqus.com/embed.js';
+                
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+                    </div>
+                </div>
+                <div class="uk-width-medium-2-10">
+
+                    <!-- page view -->
+                    <div class="uk-panel uk-panel-box">
+                        <i class="uk-icon-eye"></i>
+                            <script language="Javascript">
+                            document.write('<a href="http://www.free-counter.jp/"></a>');</script><noscript>
+                            <a href="http://hqm.f-counter.com/">counter</a>
+                            <a href="http://www.free-counter.jp/">カウンター</a></noscript>
+                            <a href="http://www.free-counter.jp/"><img src="https://www.f-counter.net/j/28/1495398799/" alt="カウンター"></a>
+                    </div>
+
+                    <!-- author info -->
+                    <div class="uk-panel uk-panel-box">
+                        <div class="uk-panel-badge uk-badge"> About Me </div>
+                        <h3 class="uk-panel-title"> dokelung </h3>
+                        <img class="uk-thumbnail uk-thumbnail-small uk-align-center"
+                             src="http://dokelung.me/images/dokelung.jpeg"
+                             alt="dokelung">
+                        <p>
+                            <ul class="uk-list">
+                                   <li> I am <a href="https://github.com/its-django/mysite/wiki">a book author</a></li>
+                                   <li> I am <a href="https://github.com/dokelung">a pythoner</a></li>
+                            </ul>
+                                <p> Hi, my name is Ko-Lung Yuan! </p>
+                                <p> 你好，我是袁克倫，你可以叫我 dokelung，我是一名小小軟體工程師，專長是電子設計自動化。 愛學習也愛分享，寫書來推廣熱愛的知識一直是我的夢想。 本應與 C++ 共度一生，卻意外成為 Python 的終極狂熱者，幾乎生活上的大小事都想用 Python 解決(可惜吃飯和上廁所不行)，酷愛有關於 Python 的一切。 </p>
+                        </p>
+                        <p class="uk-text-right">
+                            <a href="http://dokelung.me/pages/about-me"> More About Me... </a>
+                        </p>
+                        <hr>
+                            <h3 class="uk-panel-title"> Contacts </h3>
+                                <a href="dokelung@gmail.com"
+                                   class=" uk-icon-hover                                           uk-icon-medium
+                                          uk-align-left
+                                          uk-icon-envelope-square">
+                                </a>
+                                <a href="https://github.com/dokelung"
+                                   class=" uk-icon-hover                                           uk-icon-medium
+                                          uk-align-left
+                                          uk-icon-github-square">
+                                </a>
+                                <a href="https://www.linkedin.com/in/ko-lung-yuan-536b9aa3/"
+                                   class=" uk-icon-hover                                           uk-icon-medium
+                                          uk-align-left
+                                          uk-icon-linkedin-square">
+                                </a>
+                    </div>
+
+                    <!-- newest articles -->
+                    <div class="uk-panel uk-panel-box">
+                        <div class="uk-panel-badge uk-badge uk-badge-danger"> Newest </div>
+                        <h3 class="uk-panel-title"> Newest Articles </h3>
+                        <ul class="uk-list uk-list-space">
+                                <li><a href="http://dokelung.me/category/python/python-evaluation-strategy/"> Python 到底是 call by value 還是 call by reference? 一次搞懂程式語言的函式傳參! </a></li>
+                                <li><a href="http://dokelung.me/category/python/pythonic-tip-1/"> 小小步邁向 Pythonic (1) - 利用長字串分割以製造字串清單 </a></li>
+                                <li><a href="http://dokelung.me/category/python/dont-reinvent-sandwich-2/"> Don't Reinvent Sandwich 2: Context Manager </a></li>
+                                <li><a href="http://dokelung.me/category/python/dont-reinvent-sandwich/"> Don't Reinvent Sandwich: Decorator </a></li>
+                                <li><a href="http://dokelung.me/category/pelican/test/"> 測試頁 </a></li>
+                        </ul>
+                    </div>
+
+                            <div class="uk-panel uk-panel-box">
+                                    <div class="uk-panel-badge uk-badge uk-badge-danger">
+                                        book
+                                    </div>
+                                    <h3 class="uk-panel-title"> It's django </h3>
+                                    <img class="uk-thumbnail uk-thumbnail-small uk-align-center" src="http://dokelung.me/images/its_django.jpg" alt="It's django">
+                                <p> A book about python web framework Django </p>
+                                    <p class="uk-text-right"> <a href="#"> Where to buy it? </a> </p>
+                            </div>
+                            <div class="uk-panel uk-panel-box">
+                                    <div class="uk-panel-badge uk-badge uk-badge-danger">
+                                        book
+                                    </div>
+                                    <h3 class="uk-panel-title"> Python 快速入門 </h3>
+                                    <img class="uk-thumbnail uk-thumbnail-small uk-align-center" src="http://dokelung.me/images/python_quickstart.jpg" alt="Python 快速入門">
+                                <p> 適合初學者的 Python 快速入門 </p>
+                                    <p class="uk-text-right"> <a href="https://www.gitbook.com/book/dokelung/dokelung-python-quickstart/details"> Read it! </a> </p>
+                            </div>
+
+                    <!-- related links -->
+                    <div class="uk-panel uk-panel-box">
+                       <ul class="uk-nav uk-nav-parent-icon" data-uk-nav>
+                           <li class="uk-parent">
+                               <a href="#"> Related Links </a>
+                               <ul class="uk-nav-sub">
+                                       <li><a href="http://getpelican.com/" target="_blank"> Pelican </a></li>
+                                       <li><a href="http://python.org/" target="_blank"> Python.org </a></li>
+                                       <li><a href="http://jinja.pocoo.org/" target="_blank"> Jinja2 </a></li>
+                                       <li><a href="https://github.com/lucachr/pelican-mg" target="_blank"> mg </a></li>
+                               </ul>
+                           </li>
+                       </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- footer -->
+            <footer id="jojo-page-bottum" class="uk-clearfix">
+            <div class="uk-panel uk-panel-box uk-margin-large-top uk-container-center">
+                <p class="uk-text-center">
+                    © 2017 dokelung. All rights reserved. <br>
+
+                    Code snippets in the pages are released under
+                    <a href="https://opensource.org/licenses/MIT"> The MIT License </a>
+                    , unless otherwise specified. <br><br>
+
+                    Powered by <a href= "http://docs.getpelican.com/">Pelican</a>.
+                    Theme <a href="https://github.com/dokelung/jojo">jojo</a> by <a href="http://dokelung.me/">dokelung</a>
+                    powered by <a href="https://getuikit.com/v2/index.html"> uikit2 </a>
+                    inspired by <a href="https://github.com/lucachr/pelican-mg">mg</a>.
+                </p>
+            </div>
+            </footer>
+
+        </div>
+    </main>
+
+
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-56219026-2', 'auto');
+            ga('send', 'pageview');
+        </script>
+
+</body>
+</html>
